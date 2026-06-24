@@ -5,3 +5,10 @@ Hello And welcome to the neextra REPO! this repo contains 3 things (this will up
 TDM
 BetterSplash
 Termux-ezstore
+
+# When u install this apps:
+BetterSplash:
+to set 2 apps that u want to execute u can use is: setbettersplashprogram
+
+# How to install 
+git clone https://github.com/Superchavo/NeeXtraRepo.git then cd NeeXtraRepo then chmod +x Installer && ./Installer
