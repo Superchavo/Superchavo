@@ -1,8 +1,8 @@
-Codename: termux
+Codename: neextra
 Version: 1
 Architectures: all
-Description: termux repository
-Suite: termux
+Description: neextra repository
+Suite: neextra
 Date: Wed, 24 Jun 2026 00:42:17 UTC
 Components: extras
 MD5Sum:
