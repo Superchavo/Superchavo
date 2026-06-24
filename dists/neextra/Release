@@ -1,29 +1,29 @@
 Codename: neextra
-Date: Wed, 24 Jun 2026 05:04:02 +0000
+Date: Wed, 24 Jun 2026 05:10:54 +0000
 Description: The official NeeXtraRepo Repo!
 Suite: neextra
 Version: 1
 MD5Sum:
- e1cca3b4db337e2ea8467eaa7e552637              126 Release
+ ee5b36ba9ae52c10dc5dacc5dbff1542              126 Release
  60ea35548f3bedfd3bc5a2fc54e3c09f              187 xtreleases/Contents-all
  805503383a7269ced2cff09dbbcb7ca2              136 xtreleases/Contents-all.xz
- d41d8cd98f00b204e9800998ecf8427e                0 xtreleases/binary-all/Packages
- 8dc5aea5b03dff8595f096f9e368e888               32 xtreleases/binary-all/Packages.xz
+ f66f95b90b89063b285da1c393422124             2022 xtreleases/binary-all/Packages
+ 8c64cd3882632fe0d5f8df777ffae2af             1212 xtreleases/binary-all/Packages.xz
 SHA1:
- 9e141061753defefd20eccfffaaaed1a3e2d795f              126 Release
+ 93eca59bd0ea526dec66687b0c2c9de1cb015963              126 Release
  ae44dad6be97a983f81018c4760f8c2692e9bac3              187 xtreleases/Contents-all
  9bffe332c347858c9bf03f60eb54e7e52187ee77              136 xtreleases/Contents-all.xz
- da39a3ee5e6b4b0d3255bfef95601890afd80709                0 xtreleases/binary-all/Packages
- 9746882f4236fa1c3a8f86be2f1d9c46680c0b10               32 xtreleases/binary-all/Packages.xz
+ 042447cd63c084121884a5f9246e0eb1a00bcc3b             2022 xtreleases/binary-all/Packages
+ 0bd3fada6615a6301759834b261af22b1ade89e4             1212 xtreleases/binary-all/Packages.xz
 SHA256:
- a92a91076e8619bf81056c8002a179329d58ef4adf6211cf93c8e87dcfec6f38              126 Release
+ e79aee621dbfd190d48926761bfdbbcc26e2eb55bd275f8f1c1bb39587f4de89              126 Release
  2b774df03392747ac74a3813c3229b865ea0c2d1ffd6e2b4ac3ee41a14102197              187 xtreleases/Contents-all
  91bfa92f3c72df72731af34a71c26b671c5e310b6dd0cd53abbfb30b47435d84              136 xtreleases/Contents-all.xz
- e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 xtreleases/binary-all/Packages
- 0040f94d11d0039505328a90b2ff48968db873e9e7967307631bf40ef5679275               32 xtreleases/binary-all/Packages.xz
+ e92f7d6d36e940eb8cdd3ff2c67dafe2e41cde13f9c36067abaaf007a41a32bd             2022 xtreleases/binary-all/Packages
+ 6c831b73525372ff1e003f98b484800ac657e393323db62a3a29a0a1098909de             1212 xtreleases/binary-all/Packages.xz
 SHA512:
- 32ba4a9188522ad253f836d69ee07d57e8c293e02eb9309654fa524b3cbe6bcbcb7f3ee1746b327f54cd981b4dda7af927400f4e1cffff26ad465833d1e9d69a              126 Release
+ 7adf3633045e1fe533e5a065bfd5fcad7f33f033e6f129a6ab55e77e1a6bdbdd526a8865fcb231e03a19917c9671d61b4a586643a765987c3180bcfa022a4707              126 Release
  9666d74d2a06432ffd365a1a6c1717551bdd3281d7aff736a5954ddbf8c8431c2c1720bd7a61f6950d85965d7b4a59353ffe8729b85fa1b8388aef8b61335a72              187 xtreleases/Contents-all
  bcf9f4e6af4d45c7d81b1c994524759c8a8692593081724538616f2cf8bdace2cfee6cc2434bb6df5af31771c1899ba6c0ffc20383fe7f10383ff5af9d497de9              136 xtreleases/Contents-all.xz
- cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 xtreleases/binary-all/Packages
- 034b32f1138322638c7a5b7949a3b184c6a4cdfd003360a496c08c56c2cc645c94fbe9cdf9d84c963af6dda6c442717cd61d7e1cecf7024bd463f6f5196c5527               32 xtreleases/binary-all/Packages.xz
+ 228704c9eb4cd593a011015975ed1053002c165a7d2a7cb4451ec73879d0809086e0719747077800c0308046864bdb2817c00a9686ee8b9eff4f71daa75ef67b             2022 xtreleases/binary-all/Packages
+ 41a3a84530afa95e6a108e60554b077042704a7683f705fc0ef1feaf781b2a714e8e412d8f29548eab6e5adf7475524b5446912ae76cd75484c28560ad1cc6f8             1212 xtreleases/binary-all/Packages.xz
