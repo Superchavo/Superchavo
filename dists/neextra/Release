@@ -1,24 +1,28 @@
-Date: Wed, 24 Jun 2026 04:58:48 +0000
+Codename: neextra
+Date: Wed, 24 Jun 2026 05:04:02 +0000
+Description: The official NeeXtraRepo Repo!
+Suite: neextra
+Version: 1
 MD5Sum:
- a005f6f7d160064930078e52f6430593               38 Release
+ e1cca3b4db337e2ea8467eaa7e552637              126 Release
  60ea35548f3bedfd3bc5a2fc54e3c09f              187 xtreleases/Contents-all
  805503383a7269ced2cff09dbbcb7ca2              136 xtreleases/Contents-all.xz
  d41d8cd98f00b204e9800998ecf8427e                0 xtreleases/binary-all/Packages
  8dc5aea5b03dff8595f096f9e368e888               32 xtreleases/binary-all/Packages.xz
 SHA1:
- 4d446d57226bfa6d1878768712cfb2aba17e2e0e               38 Release
+ 9e141061753defefd20eccfffaaaed1a3e2d795f              126 Release
  ae44dad6be97a983f81018c4760f8c2692e9bac3              187 xtreleases/Contents-all
  9bffe332c347858c9bf03f60eb54e7e52187ee77              136 xtreleases/Contents-all.xz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 xtreleases/binary-all/Packages
  9746882f4236fa1c3a8f86be2f1d9c46680c0b10               32 xtreleases/binary-all/Packages.xz
 SHA256:
- 676f1473ceb34faff8807771ab5093d05888c19582014802cbe58ba4427b4c6b               38 Release
+ a92a91076e8619bf81056c8002a179329d58ef4adf6211cf93c8e87dcfec6f38              126 Release
  2b774df03392747ac74a3813c3229b865ea0c2d1ffd6e2b4ac3ee41a14102197              187 xtreleases/Contents-all
  91bfa92f3c72df72731af34a71c26b671c5e310b6dd0cd53abbfb30b47435d84              136 xtreleases/Contents-all.xz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 xtreleases/binary-all/Packages
  0040f94d11d0039505328a90b2ff48968db873e9e7967307631bf40ef5679275               32 xtreleases/binary-all/Packages.xz
 SHA512:
- 2cc5deae83dee6f00337821630776403f0bd7e891dbde6c424f8cfc2069572d6b858334e354bb1f2989e4c302403d717d5e7677e87c55918cfb24ed3bb00907a               38 Release
+ 32ba4a9188522ad253f836d69ee07d57e8c293e02eb9309654fa524b3cbe6bcbcb7f3ee1746b327f54cd981b4dda7af927400f4e1cffff26ad465833d1e9d69a              126 Release
  9666d74d2a06432ffd365a1a6c1717551bdd3281d7aff736a5954ddbf8c8431c2c1720bd7a61f6950d85965d7b4a59353ffe8729b85fa1b8388aef8b61335a72              187 xtreleases/Contents-all
  bcf9f4e6af4d45c7d81b1c994524759c8a8692593081724538616f2cf8bdace2cfee6cc2434bb6df5af31771c1899ba6c0ffc20383fe7f10383ff5af9d497de9              136 xtreleases/Contents-all.xz
  cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 xtreleases/binary-all/Packages
