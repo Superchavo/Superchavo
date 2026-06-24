@@ -11,4 +11,4 @@ BetterSplash:
 to set 2 apps that u want to execute u can use is: setbettersplashprogram
 
 # How to install 
-git clone https://github.com/Superchavo/NeeXtraRepo.git then cd NeeXtraRepo then chmod +x 8nstaller.sh && ./installer.sh
+git clone https://github.com/Superchavo/NeeXtraRepo.git then cd NeeXtraRepo then chmod +x installer.sh && ./installer.sh
