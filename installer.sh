@@ -28,7 +28,7 @@ mkdir -p $PREFIX/etc/apt/sources.list.d
 
 # Step 2: Write the repository line into neextra.list
 echo -e "${YELLOW}[⚙️] Configuration:${NC} Writing repository info to sources.list.d..."
-echo "deb [trusted=yes arch=all] https://superchavo.github.io/NeeXtraRepo neextra xtreleases" > $PREFIX/etc/apt/sources.list.d/neextra.list
+echo "deb [signed-by=https://superchavo.github.io/NeeXtraRepo/key.pub arch=all] https://superchavo.github.io/NeeXtraRepo neextra xtreleases" > $PREFIX/etc/apt/sources.list.d/neextra.list
 sleep 1
 
 # Step 3: Run apt update to sync the new packages

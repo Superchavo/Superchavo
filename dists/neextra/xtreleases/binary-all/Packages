@@ -19,10 +19,10 @@ Version: 1.0.1
 Architecture: all
 Maintainer: Superchavo <superchavoofficialscratchyt@gmail.com>
 Filename: ./neextra-keyring_1.0.1_all.deb
-Size: 3128
-MD5sum: e50345a1988851e85f5b4a0d240639da
-SHA1: 47025693ab81de1f844633a9185af202009e07b1
-SHA256: 57e0c8759ec1a5929b1f92638ef90c95023a2c57aba1d9bf619fc542520dc23f
+Size: 5740
+MD5sum: 4be358205357a992a9d3b6daaac1314a
+SHA1: 25be02e3e24f1aa36dd475037384e45aebf7909e
+SHA256: 87219de15b7951da7f4372806c0eac1b6893f2531ca58b5d4f022b14e185b855
 Description: GnuPG archive key for the NeeXtraRepo
 
 Package: termux-dm
