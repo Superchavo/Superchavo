@@ -1,30 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-Date: Thu, 25 Jun 2026 16:05:18 +0000
+Codename: neextra
+Date: Thu, 25 Jun 2026 16:12:07 +0000
+Description: The official NeeXtraRepo Repo!
+Suite: neextra
+Version: 1
 MD5Sum:
- 57980328cbb22e0befd5cd8311ae8591               38 Release
+ 3ad7ebb2d987f821689afeb7a3d2ed12              126 Release
  60ea35548f3bedfd3bc5a2fc54e3c09f              187 xtreleases/Contents-all
  805503383a7269ced2cff09dbbcb7ca2              136 xtreleases/Contents-all.xz
  bec63084fea9ab96537cafeb4740b1e0             2127 xtreleases/binary-all/Packages
  d026e415e13b6c954ae754c533eecc87             1120 xtreleases/binary-all/Packages.gz
  c1cb37e38e80843c598b336b998486a1             1212 xtreleases/binary-all/Packages.xz
 SHA1:
- 24724f5f536b0d56c8e2ec298ff546b0ff119d20               38 Release
+ 10739ac18fc3417736193d0e8ab2cfbc19cc4205              126 Release
  ae44dad6be97a983f81018c4760f8c2692e9bac3              187 xtreleases/Contents-all
  9bffe332c347858c9bf03f60eb54e7e52187ee77              136 xtreleases/Contents-all.xz
  5ca2b63548971554d68d585c83383147967aeafe             2127 xtreleases/binary-all/Packages
  b709249c10043b540ef21c48c15725b9c6986881             1120 xtreleases/binary-all/Packages.gz
  3197b79df2b941134747074c030190bc2f814cfe             1212 xtreleases/binary-all/Packages.xz
 SHA256:
- 0632bbe74711ebfffab17ccc85b794d1afe813ad5705d8e0ad308fd26c057248               38 Release
+ 91be3b4e8a51b134a8915f3243bff841f2597438a66e4d356ad47f50fa3b6103              126 Release
  2b774df03392747ac74a3813c3229b865ea0c2d1ffd6e2b4ac3ee41a14102197              187 xtreleases/Contents-all
  91bfa92f3c72df72731af34a71c26b671c5e310b6dd0cd53abbfb30b47435d84              136 xtreleases/Contents-all.xz
  93027bbcb6befa7c26d0af63f54312de69c43e30357411e9233dbf25f328d88d             2127 xtreleases/binary-all/Packages
  a2579912dabbdc65723e732e246b0946d5eea3d5012fc6184e9886147725d71b             1120 xtreleases/binary-all/Packages.gz
  530d65e7aa9da21648162b03797171c40d4176e02122c77486ba0e145e99bc98             1212 xtreleases/binary-all/Packages.xz
 SHA512:
- aa5ef78aa38c05469d0404fe5a5c4565c1fc7125b0228fe7069191232d4abe4378fefb4495a06d9e6af3743b9cb2bf031f37df0530155348ee0b4556c2665345               38 Release
+ 6d1e9d5c4fcd4db61fbd2f87b1b6d29bcf588e0de3c83a1b41ec8a6f492c7744d22e8ac05f949b1a53f65c32e932bf9c72fbb8bfb3cf5886e7f13854e29c36d2              126 Release
  9666d74d2a06432ffd365a1a6c1717551bdd3281d7aff736a5954ddbf8c8431c2c1720bd7a61f6950d85965d7b4a59353ffe8729b85fa1b8388aef8b61335a72              187 xtreleases/Contents-all
  bcf9f4e6af4d45c7d81b1c994524759c8a8692593081724538616f2cf8bdace2cfee6cc2434bb6df5af31771c1899ba6c0ffc20383fe7f10383ff5af9d497de9              136 xtreleases/Contents-all.xz
  06acd08c0eb9e145cdb2397cbbe51c07b9243f72c36be5e70c3eb2374c503139038018a9a5362ffc9b86d7a4b5c770184c8ab0f70f945234190f5c337f2c2bbe             2127 xtreleases/binary-all/Packages
@@ -32,18 +36,18 @@ SHA512:
  d6e12a62b160e1b1c500c0c6bba3f2d71471146a8a9baa6e98906098e8908eeb313759c3e709e04cbb4255a2e654ed9e138c7cbdce5861f4ebd7ddec10f438d2             1212 xtreleases/binary-all/Packages.xz
 -----BEGIN PGP SIGNATURE-----
 
-iQJPBAEBCAA5FiEEldyu0YIOfP13Ioe5Q2tTKiYrv4YFAmo9UcAbFIAAAAAABAAO
-bWFudTIsMi41KzEuMTEsMywyAAoJEENrUyomK7+Gq98P/A7PAHsbKAijSMr9ayP7
-7XQkWnl/0HIPFT+HNwTJbkqAlXovH6nnq4iHZODZC0N+/rt3YlkrFeUV/UOKCGwC
-gAfeyApbwcGTRn2qDIe7TG+jipW8VwL7e9og2o9OyX4ZjZi1lW12xQgoTDpD6Us1
-EtzL9ehu48hPYzQxI08TQwmFIF1k1uh34GpG0kFJ01CkC5SwYuD19lSAg81MYu+s
-3jiDFtspXzxLt/awBxdRIRarGu2r02R/5xYA4mJ/haDQhoySYwJPIT3Wtb4KCnQA
-3153Hl0sRbnwSl5wFFheXlQt8xSRsnrD+4UuQQUsVfyPlqiODpC9VGy0lhgDvUUZ
-3xJ3el5ZVLJl5orgNoC6EUv+zU14hy9pFrcjWbS47qWngujUhdXDXaeN+f19Kh2w
-5YzIZFWXGa6nYlTunu96aoyZOcPxBHScF7OwEUn2Hx65A5ioQbCGttE0mzNjZP2p
-bB8gg9N2+tujojPq+lWe5DD8Ml4lI6rCzyQlzoTDqTe7JEgIK09KTC4wvYq15FRc
-lqYtPMn2wKwVUgsoTXbUQkkNEMtj7rDrH2vPsSstQqvSN2YRC9PZJ4yYrWhgGMBK
-YUcEe2X1GOoMa66gGCgk3OXBuQXiJrd/fkx4Db3GbZd6SHeqzzC79wCyvl0FejxY
-/K3oO1POFN6RQTnGduV3qEL4
-=+SB2
+iQJPBAEBCAA5FiEEldyu0YIOfP13Ioe5Q2tTKiYrv4YFAmo9U1kbFIAAAAAABAAO
+bWFudTIsMi41KzEuMTEsMywyAAoJEENrUyomK7+GtLIP/1rGBeFofZbS7nE8rLpA
+kJQDBoEDqitZJhYasO9XeMnPfmtfRkILQ6H0YBb70vDAf+mCJnNBMdOG135ykT+E
+iBIi/75VfA1TDgPAoNfIHtFO3us/HYL7Jeu21MimbBTxi1SZx7f7nLCPZ6+7NGcY
+cJwLMfSm1Gw1hcD1aqlXjPjcqQW6CMJuqopDi0K2RPfL2bfaTFhdilCEcwwZTYHx
+Z0v5XNxYACL/1PfzY30IatopmA6Mydohh5JdijG/zFiI788Qx6EQzPwIXBLCIy9j
+Z73vN30ojvdVSNlwMY4sUgyuGadSkk71cgavsoDJo2VJTq7rFhmtpQnqvIPQCm6q
+F8pYtvky2s03nGOdd4MCkBQljgYT9a+oIerzsgu96/JQw6xUaS+Tdta763cYC3Lr
+SMgyj8UABiYNTT1l4Bo8TIb3XbSg+v4Ixg/bLl3wsi8ABJ75DD58rsnUa+CcU+6R
+l71B17e1O7cwE8laZyQ+23syIZZ6YUvrx6WJkyaX5KzKoAFhBYjc5pCxdLoiRauY
+Wvr6frsXnsSWuFDSegSRBhsXnhF5ciFGrLzdTk4IWfzW1sw1Cmr0MsfsZT4msrDs
+u5TK8H8BQU1/mRoY2CvOWFd9xQvhHcP7zuIBIOENPzfgcNtGXU+Su5I9lztAJgYL
+veyA3fZI7Xw+3WVDgDzueu1J
+=G82K
 -----END PGP SIGNATURE-----
