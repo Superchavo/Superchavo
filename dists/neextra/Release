@@ -1,37 +1,35 @@
 Architectures: all
 Codename: neextra
 Components: xtreleases
-Date: Thu, 25 Jun 2026 16:18:36 +0000
+Date: Thu, 25 Jun 2026 19:55:07 +0000
 Description: The official NeeXtraRepo Repo!
-Label: NeeXtraRepo
-Origin: NeeXtraRepo
 Suite: neextra
 Version: 1
 MD5Sum:
- 14ba74221028917900572e20970ad138              207 Release
+ de2724563a3e19c4e4255951016101d3              168 Release
  60ea35548f3bedfd3bc5a2fc54e3c09f              187 xtreleases/Contents-all
  805503383a7269ced2cff09dbbcb7ca2              136 xtreleases/Contents-all.xz
- bec63084fea9ab96537cafeb4740b1e0             2127 xtreleases/binary-all/Packages
- d026e415e13b6c954ae754c533eecc87             1120 xtreleases/binary-all/Packages.gz
- c1cb37e38e80843c598b336b998486a1             1212 xtreleases/binary-all/Packages.xz
+ e2793567a9af751973f4cfc836dd9e09             2002 xtreleases/binary-all/Packages
+ 94d664e35217bcbd0c3181c9118acdbc             1063 xtreleases/binary-all/Packages.gz
+ 9072ae4038ea5fcff6826742cd159b37             1148 xtreleases/binary-all/Packages.xz
 SHA1:
- 69de20424b7b5bc898fdb896d61c6b2b4028d144              207 Release
+ 7da79ef988a78b5acf970cb4ac6458ab27f5ebaa              168 Release
  ae44dad6be97a983f81018c4760f8c2692e9bac3              187 xtreleases/Contents-all
  9bffe332c347858c9bf03f60eb54e7e52187ee77              136 xtreleases/Contents-all.xz
- 5ca2b63548971554d68d585c83383147967aeafe             2127 xtreleases/binary-all/Packages
- b709249c10043b540ef21c48c15725b9c6986881             1120 xtreleases/binary-all/Packages.gz
- 3197b79df2b941134747074c030190bc2f814cfe             1212 xtreleases/binary-all/Packages.xz
+ edbc9c4821317171e4f83e51d45ef39d49466bcf             2002 xtreleases/binary-all/Packages
+ 17d5f6b0ec4bb2dfa71eca27e20ac48b7d9bdbde             1063 xtreleases/binary-all/Packages.gz
+ c5eead5fd6b1df56f9b010b5e9e4b67bfb5f8459             1148 xtreleases/binary-all/Packages.xz
 SHA256:
- b27b4b7af0323fed4deba34b2ecea620846d32bec77ad62709ad1cc0b8eee3f7              207 Release
+ 48df9ce89120d7386c631372f4e123ef48f73913a8c9bc6a93ea1ebd6b9d06dc              168 Release
  2b774df03392747ac74a3813c3229b865ea0c2d1ffd6e2b4ac3ee41a14102197              187 xtreleases/Contents-all
  91bfa92f3c72df72731af34a71c26b671c5e310b6dd0cd53abbfb30b47435d84              136 xtreleases/Contents-all.xz
- 93027bbcb6befa7c26d0af63f54312de69c43e30357411e9233dbf25f328d88d             2127 xtreleases/binary-all/Packages
- a2579912dabbdc65723e732e246b0946d5eea3d5012fc6184e9886147725d71b             1120 xtreleases/binary-all/Packages.gz
- 530d65e7aa9da21648162b03797171c40d4176e02122c77486ba0e145e99bc98             1212 xtreleases/binary-all/Packages.xz
+ 02ab6cebbeb13b1e5046877c3bbf4c4676a31315a3e03c206e0eddd0939ea40e             2002 xtreleases/binary-all/Packages
+ c59900a8614db3f4f88d7dafb980bf1e59bcfa639ff320d88d817e89fa97d8e2             1063 xtreleases/binary-all/Packages.gz
+ 5965c3f6408754fe8054028ec65eb38edbce5681db41304076d9beefd169bf5d             1148 xtreleases/binary-all/Packages.xz
 SHA512:
- 1ffefebb939ce9728daee869c9f55839903062bf44b7c53f8fd33e9f533f266e38d8e88362b2c65920f22d718d746a0cd782b62dca1fdc0006a2b564199e6db0              207 Release
+ ddf1579e8d65b47caa266fb5e91f23da2165b49f1871f03241708f4079a246ea04f197c862af6ee79c0328e3eda5ade097da60cc36c22ec9c7534478d7914b4d              168 Release
  9666d74d2a06432ffd365a1a6c1717551bdd3281d7aff736a5954ddbf8c8431c2c1720bd7a61f6950d85965d7b4a59353ffe8729b85fa1b8388aef8b61335a72              187 xtreleases/Contents-all
  bcf9f4e6af4d45c7d81b1c994524759c8a8692593081724538616f2cf8bdace2cfee6cc2434bb6df5af31771c1899ba6c0ffc20383fe7f10383ff5af9d497de9              136 xtreleases/Contents-all.xz
- 06acd08c0eb9e145cdb2397cbbe51c07b9243f72c36be5e70c3eb2374c503139038018a9a5362ffc9b86d7a4b5c770184c8ab0f70f945234190f5c337f2c2bbe             2127 xtreleases/binary-all/Packages
- 8a484f3543f125a8f1dfa52abb261b2d7f52ded46635f3f94e1114fbd25f9cff1c620a4373f341ec1f9caeaaae555bde1e65d1da531e49717041b4a72df0b16f             1120 xtreleases/binary-all/Packages.gz
- d6e12a62b160e1b1c500c0c6bba3f2d71471146a8a9baa6e98906098e8908eeb313759c3e709e04cbb4255a2e654ed9e138c7cbdce5861f4ebd7ddec10f438d2             1212 xtreleases/binary-all/Packages.xz
+ 454113e989ee7f8a21167f4991d2f0c63febd126b65049e52a7fdfdeaf65c095ff5fb2eff6359d5829b3d42bb252a65a59608fa2d41da36229dc5fcc8396bed0             2002 xtreleases/binary-all/Packages
+ 654344e2accb0f092cc95d0c2a3a8f4fed7503dea011d9f84dcf26aa4a56f5d2908e8994c664bc48ce6fe5d7a9a4fb8745a67feed94eef6c68198fb39b977abe             1063 xtreleases/binary-all/Packages.gz
+ 2bad370a264f58c5f7dbac0cb6793b9443ced82bcdab84ed475c01b3a13df99e5acccbd6ec5fc23aa1015b65572bbf15c2b87d1bb0bcdc84972b0a3f8f90ba51             1148 xtreleases/binary-all/Packages.xz

@@ -15,17 +15,15 @@ Description: A beautiful, ultra-fast custom system splash screen for Termux
  automated interactive launch slots.
 
 Package: neextra-keyring
-Version: 1.0.0
+Version: 1.0.1
 Architecture: all
 Maintainer: Superchavo <superchavoofficialscratchyt@gmail.com>
-Filename: ./neextra-keyring_1.0.0_all.deb
-Size: 3200
-MD5sum: a9d9fc30fd7e4ee4348c5d1bedeaae3e
-SHA1: 83aab2b77600fb708db86e66a739e07a356ef652
-SHA256: fe260a474bb9f3818865144f892a5ce853cdd939337b67bf47c2b07ecaafda48
+Filename: ./neextra-keyring_1.0.1_all.deb
+Size: 3128
+MD5sum: e50345a1988851e85f5b4a0d240639da
+SHA1: 47025693ab81de1f844633a9185af202009e07b1
+SHA256: 57e0c8759ec1a5929b1f92638ef90c95023a2c57aba1d9bf619fc542520dc23f
 Description: GnuPG archive key for the NeeXtraRepo
- This package contains the public key used to sign the NeeXtraRepo
- index files, allowing apt to verify repository packages.
 
 Package: termux-dm
 Version: 5.0-final
