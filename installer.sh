@@ -26,12 +26,12 @@ sleep 1
 # Paso 1: Asegurar que el directorio de fuentes exista
 mkdir -p $PREFIX/etc/apt/sources.list.d
 
-# Paso 2: Escribir la línea del repositorio apuntando al llavero de tu paquete .deb
+# Paso 2: Escribir la línea del repositorio ignorando firmas con trusted=yes
 echo -e "${YELLOW}[⚙] Configuration:${NC} Writing repository info to sources.list.d..."
-echo "deb [signed-by=$PREFIX/share/keyrings/neextra-keyring.gpg arch=all] https://superchavo.github.io/NeeXtraRepo neextra xtreleases" > $PREFIX/etc/apt/sources.list.d/neextra.list
+echo "deb [trusted=yes arch=all] https://superchavo.github.io/NeeXtraRepo neextra xtreleases" > $PREFIX/etc/apt/sources.list.d/neextra.list
 sleep 1
 
-# Paso 3: Actualizar las listas de paquetes
+# Paso 3: Actualizar las listas de paquetes de forma directa
 echo -e "\n${CYAN}[🚀] Syncing:${NC} Fetching package lists from NeeXtraRepo mirrors...\n"
 apt update
 
