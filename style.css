@@ -1,0 +1,248 @@
+/* Paleta estilo Terminal Linux Tradicional (ANSI Colors) */
+:root {
+    --bg-main: #0f1015;
+    --term-bg: #12131a;
+    --term-head: #1a1c25;
+    --border-color: #2b2e3b;
+    
+    /* Colores de sintaxis de consola */
+    --ansi-white: #c5cdd8;
+    --ansi-cyan: #00d7ff;
+    --ansi-green: #5af78e;
+    --ansi-yellow: #f3f99d;
+    --ansi-magenta: #ff6ac1;
+    --ansi-blue: #57c7ff;
+    --ansi-red: #ff5c57;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--ansi-white);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+::selection {
+    background: var(--ansi-yellow);
+    color: #000;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 10px;
+}
+
+.banner-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.banner-container img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+}
+
+/* Caja de Terminal */
+.terminal-window {
+    background-color: var(--term-bg);
+    border: 2px solid var(--border-color);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+}
+
+.terminal-header {
+    background-color: var(--term-head);
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.button {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.btn-close { background-color: var(--ansi-red); }
+.btn-minimize { background-color: var(--ansi-yellow); }
+.btn-maximize { background-color: var(--ansi-green); }
+
+.terminal-title {
+    margin: 0 auto;
+    font-size: 0.85rem;
+    color: #6272a4;
+    font-weight: bold;
+    transform: translateX(-25px);
+}
+
+.terminal-body {
+    padding: 25px;
+}
+
+.welcome-text {
+    color: var(--ansi-white);
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Listado de paquetes */
+h2 {
+    color: var(--ansi-cyan);
+    font-size: 1.1rem;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+.app-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0 30px 0;
+}
+
+.app-list li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 1rem;
+}
+
+.app-list li::before {
+    content: "#";
+    position: absolute;
+    left: 0;
+    color: var(--ansi-magenta);
+    font-weight: bold;
+}
+
+.pkg-name {
+    color: #fff;
+    font-weight: bold;
+}
+
+.pkg-tag {
+    color: var(--ansi-green);
+    font-size: 0.85rem;
+    margin-left: 8px;
+}
+
+/* Nota de configuración */
+.config-box {
+    background-color: #161821;
+    border: 1px dashed var(--ansi-magenta);
+    padding: 15px;
+    margin: 25px 0;
+    position: relative;
+}
+
+.config-tag {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-color: var(--ansi-magenta);
+    color: #000;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    font-weight: bold;
+}
+
+.config-box p {
+    margin: 0;
+}
+
+.inline-code {
+    background-color: #000;
+    color: var(--ansi-yellow);
+    padding: 3px 6px;
+    border: 1px solid #222;
+}
+
+.divider {
+    border-top: 2px dashed var(--border-color);
+    margin: 30px 0;
+}
+
+/* Bloque de comandos */
+.command-box {
+    background-color: #000;
+    border: 1px solid var(--border-color);
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.command-line {
+    word-break: break-all;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.user { color: var(--ansi-green); font-weight: bold; }
+.host { color: var(--ansi-blue); }
+.dir { color: var(--ansi-cyan); }
+.cmd { color: var(--ansi-white); }
+
+/* Botón interactivo */
+.copy-btn {
+    background-color: var(--term-head);
+    border: 1px solid var(--border-color);
+    color: var(--ansi-white);
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    transition: background 0.15s;
+}
+
+.copy-btn:hover {
+    background-color: var(--border-color);
+    color: #fff;
+}
+
+.copy-btn.success {
+    background-color: var(--ansi-green);
+    color: #000;
+    border-color: var(--ansi-green);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: #4b526d;
+}
+
+footer a {
+    color: var(--ansi-blue);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes responsivos para pantallas como tablets/móviles */
+@media (max-width: 600px) {
+    .command-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .copy-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
