@@ -8,41 +8,52 @@
 </head>
 <body>
 
-    <div class="hub-container">
-        <header class="hub-header">
-            <h1 class="glitch-text">SUPERCHAVO</h1>
-            <p class="subtitle">KDE Lover // Linux Lover // Termux Developer</p>
-        </header>
+    <div class="terminal-container">
+        <!-- Barra de estado superior estilo ventana Linux -->
+        <div class="terminal-header">
+            <div class="buttons">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+            <div class="title">u0_github@localhost: ~</div>
+        </div>
 
-        <main class="projects-grid">
+        <!-- Contenido de la Terminal con tu README -->
+        <main class="terminal-body">
+            <div class="prompt-line">
+                <span class="user">u0_github@localhost</span>:<span class="dir">~</span>$ cat README.md
+            </div>
             
-            <!-- Card 1: NeeXtra Repo (The folder you will rename on GitHub) -->
-            <a href="/NeeXtraRepo" class="project-card">
-                <div class="card-status">ONLINE</div>
-                <div class="card-icon">📦</div>
-                <div class="card-content">
-                    <h3>NeeXtra Repo</h3>
-                    <p>Custom APT repository featuring optimized tools and packages for Termux like TDM, BetterSplash, and ezstore.</p>
-                    <span class="card-link">Access Repository →</span>
-                </div>
-            </a>
+            <section class="readme-content">
+                <h2>Hi There!!! 👋</h2>
+                <p>Hello and welcome to my Profile! I'm a KDE lover and also a Linux lover and I make things for Termux and Linux.</p>
+            </section>
 
-            <!-- Card 2: Scratch Development -->
-            <a href="https://scratch.mit.edu" target="_blank" class="project-card">
-                <div class="card-status external">EXTERNAL</div>
-                <div class="card-icon">🧩</div>
-                <div class="card-content">
-                    <h3>Scratch Projects</h3>
-                    <p>Advanced logical variables, custom engines, and script implementations built for the community.</p>
-                    <span class="card-link">Explore Projects →</span>
-                </div>
-            </a>
+            <div class="prompt-line">
+                <span class="user">u0_github@localhost</span>:<span class="dir">~</span>$ ls -la projects/
+            </div>
 
+            <div class="projects-list">
+                <!-- Proyecto 1: Tu Repositorio -->
+                <a href="/NeeXtraRepo" class="project-item">
+                    <span class="item-icon">📦</span>
+                    <span class="item-name">NeeXtraRepo/</span>
+                    <span class="item-desc">- Custom APT repository for Termux.</span>
+                </a>
+
+                <!-- Proyecto 2: Scratch -->
+                <a href="https://scratch.mit.edu" target="_blank" class="project-item">
+                    <span class="item-icon">🧩</span>
+                    <span class="item-name">ScratchProjects/</span>
+                    <span class="item-desc">- Advanced logic scripts and custom engines.</span>
+                </a>
+            </div>
         </main>
 
         <footer>
-            <div class="footer-status">Bash (profile 1) // 2026</div>
-            <div><a href="https://github.com/Superchavo" target="_blank">GitHub Profile</a></div>
+            <div class="footer-status">STATUS: READY // 2026</div>
+            <div class="footer-link"><a href="https://github.com/Superchavo" target="_blank">github.com/Superchavo</a></div>
         </footer>
     </div>
 
