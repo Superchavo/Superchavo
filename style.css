@@ -1,0 +1,195 @@
+:root {
+    --breeze-bg: #232629;
+    --breeze-view: #1b1e20;
+    --breeze-header: #1b1e20;
+    --breeze-text: #fcfcfc;
+    --breeze-accent: #3daee9;
+    --breeze-border: #4d5053;
+    --kicker-bg: rgba(35, 38, 41, 0.95);
+}
+
+body {
+    background-color: #111214;
+    color: var(--breeze-text);
+    font-family: 'Noto Sans', 'Cantarell', sans-serif;
+    margin: 0;
+    padding: 20px 15px 60px 15px; /* Espacio abajo para que el kicker no tape nada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    overflow-x: hidden;
+}
+
+.xde-window {
+    width: 100%;
+    max-width: 780px;
+    background-color: var(--breeze-view);
+    border: 1px solid var(--breeze-border);
+    border-radius: 4px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    transition: width 0.1s, height 0.1s, max-width 0.1s;
+}
+
+/* Cuando entra en Pantalla Completa real vía JS cambia el contenedor */
+.xde-window:fullscreen {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    border: none;
+    border-radius: 0;
+}
+
+.xde-window.minimized {
+    transform: translateY(60px) scale(0.85);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Header de la Xonsole */
+.xde-header {
+    background-color: var(--breeze-header);
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.xde-title-container {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+.xde-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.xde-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: 1rem;
+    font-weight: 200;
+    color: #a1a2a3;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.xde-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--breeze-text);
+}
+
+.xde-btn.close:hover {
+    background-color: #da4453;
+    color: #fff;
+}
+
+/* Cuerpo de la Terminal */
+.terminal-body {
+    padding: 20px 25px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.prompt-line { font-size: 0.95rem; margin-bottom: 12px; }
+.user { color: #2ecc71; font-weight: bold; }
+.dir { color: var(--breeze-accent); }
+
+.readme-content {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 15px;
+    border-radius: 4px;
+    margin: 12px 0 25px 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.readme-content h2 { margin: 0 0 10px 0; font-size: 1.15rem; }
+.readme-content p { margin: 0; color: #bdc3c7; line-height: 1.5; }
+.badge-container { margin-bottom: 12px; }
+
+.projects-list { display: flex; flex-direction: column; gap: 10px; }
+.project-item { display: flex; align-items: center; background-color: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); padding: 12px; border-radius: 4px; text-decoration: none; color: var(--breeze-text); transition: all 0.2s; }
+.project-item:hover { background-color: rgba(61, 174, 233, 0.08); border-color: var(--breeze-accent); transform: translateX(4px); }
+.item-icon { font-size: 1.3rem; margin-right: 15px; }
+.item-info { display: flex; flex-direction: column; }
+.item-name { font-weight: bold; color: var(--breeze-accent); }
+.item-desc { color: #95a5a6; font-size: 0.85rem; }
+
+footer { padding: 12px 25px; background-color: var(--breeze-header); border-top: 1px solid rgba(0, 0, 0, 0.2); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
+footer a { color: var(--breeze-accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* DISEÑO DEL KICKER PANEL (ESTILO PLASMA BREEZE DE ESCRITORIO) */
+.xde-kicker {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 40px;
+    background-color: var(--kicker-bg);
+    border-top: 1px solid var(--breeze-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 9999;
+    user-select: none;
+}
+
+.kicker-start {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 12px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.15s;
+}
+.kicker-start:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.kicker-tasks {
+    flex-grow: 1;
+    margin-index: 15px;
+    padding-left: 15px;
+    display: flex;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 32px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-bottom: 2px solid var(--breeze-accent);
+}
+
+.xde-systray {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.tray-icon {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.tray-icon:hover { opacity: 1; }
+.tray-clock {
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding-left: 5px;
+}

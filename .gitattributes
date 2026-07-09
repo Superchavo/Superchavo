@@ -1,0 +1,1 @@
+*.deb !text !filter !merge !diff

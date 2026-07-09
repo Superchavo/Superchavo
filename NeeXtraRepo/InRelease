@@ -1,0 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Architectures: aarch64 all
+Codename: neextra
+Components: neextra
+Date: Thu, 09 Jul 2026 16:03:24 +0000
+Description: The neextrarepo!
+Label: NeeXtra Repo
+Origin: NeeXtra Repo
+Suite: NeextraReleases
+Version: 1.0
+MD5Sum:
+ b7689e22807b5809c201e8cc774af34d             3003 Packages
+ 11b31bcca0c02095d29401758a97b6aa             1615 Packages.gz
+ e20235ecd39e38beb489ae2cb36f0fbb             1660 Packages.xz
+ 06dc6e8b685344f449e1a31a0e4c3217              210 Release
+SHA1:
+ 794192cc7c2a8d7b840bc268312a348bd57b0239             3003 Packages
+ f78d361dfa4606d6dfe9894c184733551d8ca3a5             1615 Packages.gz
+ f645c5f26a700b617f2b3b5f31ba59fcb0b834f4             1660 Packages.xz
+ 478c17e257da227b8fb70fe6fa9660c03d981a04              210 Release
+SHA256:
+ 96c6aa63c8ba0c3fb915d94ebb361670db7adaf23e58fa270476c37dbe45ece2             3003 Packages
+ e2137e83d2ca0e064603e51c6e4bd07a09f33b4dacae6bc3345bce4230e12451             1615 Packages.gz
+ aa319eff5f371c80d06b3174e04ec1dee4045cc52981b09c7155125e8554e2b3             1660 Packages.xz
+ 1b791b35007aea1c96479e3046af80d606343fd2b2ffd3248592a0644a3e9314              210 Release
+SHA512:
+ e66470f283cb4ae2e1b7235701c663cd66f1ef0d3f1fbd220c2a1e9567a42c83a0971304284085d8e122778d5f16cc7b2770b8f42c5a30219b631306fd7bb0ec             3003 Packages
+ f788d96de02468aa13fc06e0ae96a0b1afc527a2ebc37f49270afcd85fa83d70b726995c34beb3b1d741a2d92f6f932947419034a397385264d409eb76c8d1a3             1615 Packages.gz
+ bd61acd27870ccdeb6bb7d875c1e31b3982e9fa435565b29e0435335ebe143bf8479a5009ac42a3a4faa2eb64d14c7fdd804ab2cc40385db28c567c655a19abf             1660 Packages.xz
+ 212933e609e8d829b81fde0145226475f2420ad5f32c1437561bcdf298f7f65e61b4efc55817c4845de689e6603cdd6b0e81fbfc3e8d76ba37635b026c7f58ad              210 Release
+-----BEGIN PGP SIGNATURE-----
+
+iQJPBAEBCAA5FiEEcPru8yPqm1JDmuw7d5ij9bd24dMFAmpPxkwbFIAAAAAABAAO
+bWFudTIsMi41KzEuMTEsMywyAAoJEHeYo/W3duHTd6gQAKuBoyhdfNvlCsEGSVDy
+kfaq2Ho4YArNZi3HmIqJpgUStIZICpnIPgqkKVVuBa8E679QSYvcnN3hm7XCNhWT
+PlIs1iRF+M28P9Mkxx5RbLquGAgflOf4hfr8F4yS5mBI8p+gBq/QvPfye0hX1e04
+ezGJTMBJlawGdUhhr8UnjgBNB/4yN3AWci/gErqnmaNGW7rpxb15DI28Vd3HQnA8
+41dHXhX1L+/y/05MLmhwuJnUmHP8zzh6sFTNQl8Y0WErUsp9YBUNBaqZPVabM6ya
+OY316eDGapkUWtoiPp37kj1uDyNr+ON+hduys2hgYuYbgF3DebBrN4pGyFvFYHXT
+M7nK6kKhycq4gF2oVW7IqXrUULCAT1sTFElUQRUZPLla0d0S/MhvH742EseSDO3P
+4o9YZyMsXuPRMK+tGOtyqgnXPyN9Fplk8T57Jy+kXjF5+D2rqF3alRd8TknTz3yP
+972WDGyLtxzN4tm2opY8WuAwDfBWj85xqlseQbU6SXw4IOiP8bSRvBWYWQBK0FQt
+IB9+yJlZ30eCCSruyJDSWDZq4F+bQ62eDtFZp1eyGckCyI+FcQ8qFh5HI68IhzVn
+nTOysiK29XYlxrVG7y0/24DcpQ1muO8V8EjsXmocafKkOur0ceLxG2RlxDp8c3oz
+XYlAjfeXmMM2PbpSi3M7bqMO
+=8eMP
+-----END PGP SIGNATURE-----

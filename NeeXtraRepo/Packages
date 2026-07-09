@@ -1,0 +1,75 @@
+Package: bettersplash
+Architecture: all
+Version: 1.0.0
+Priority: optional
+Section: utils
+Maintainer: Termux Dev <localhost@termux>
+Depends: python3, termux-tools, fastfetch
+Filename: ./pool/bettersplash_1.0.0_all.deb
+Size: 3360
+MD5sum: 013149e2fdf94763c54e530e12bbc55a
+SHA1: 0fa1efa47145c1f22a363f81b8713a441a9086f8
+SHA256: 47221c500ccb69407fdc4932375fcc0149a56d1f8826e834150e25e1626fbf8f
+SHA512: 6649e1536ca2840bc0cdbbc883e5cce57464ccb745e7a0ba42b4ec4e3bfa239aef897a6c47d9f4e1362b93d33456486ceab45df5028b04c6ddb44df3c57816ac
+Description: A beautiful, ultra-fast custom system splash screen for Termux 
+ featuring a high-contrast metallic Tux, device hardware specs, and dual 
+ automated interactive launch slots.
+
+Package: kalk-qt
+Architecture: all
+Version: 1.0.0
+Priority: optional
+Section: utils
+Maintainer: @termux
+Depends: qalc, qalc-static, qalculate-gtk
+Filename: ./pool/kalk-qt-1.0.0.deb
+Size: 157172
+MD5sum: 2774754aa83f1313d7b9165358ac0010
+SHA1: bf1c9aabc0c75679255da40711d923e8abb6d493
+SHA256: 01a9438408fd6fedf7977fc0ef0273770cea08e44e57300dcf5b744ea6915777
+SHA512: c2980c618a8c3654928d8b655f3ccd57868536df7e86d54357f27e9290b15835a4c446924edf7dd0a687a0756cca455d88d7af6085e0f403ecc05d6daca795c9
+Description: Kalk, the new calculator for KDE
+
+Package: neextra-keyring
+Architecture: all
+Version: 1.0.1
+Maintainer: Superchavo <superchavoofficialscratchyt@gmail.com>
+Filename: ./pool/neextra-keyring_1.0.2_all.deb
+Size: 5760
+MD5sum: cf686a656e40162326b70ea3242c89ac
+SHA1: 598de65014cdf0052a18ace069b4dacc2963c805
+SHA256: ad42f49e762eb8198e3d3b3d183ac57188a1dbd26d35673e6158f4028e786ffa
+SHA512: 9d628c0a6496e9c7be4febfbe86eaa8ecb0c3b8d6010c5f05edd0f1cfc87beb9d14cd0f86d7bbc84cb734bd9f7ff99b38b9b43d872fcb007cd182037bcebc58d
+Description: GnuPG archive key for the NeeXtraRepo
+
+Package: termux-dm
+Architecture: all
+Version: 5.0-final
+Priority: optional
+Section: x11
+Maintainer: @termux
+Filename: ./pool/termux-dm_5.0-LTS-Support.deb
+Size: 5376
+MD5sum: f4bf8379d02ff27d73f9966899d6c389
+SHA1: a0d99699d8db3a72496b3382d920f2ff6f18ff56
+SHA256: f4a3bfbebdfe31febcfee164b9544d39599645b31444e81ff0183690cc3f35fc
+SHA512: 5dc75e162e1c7418a2e88876809ed32a992d5271e512b51255527bd3c4a2b6430a8fa0d183b68731530cc103de51b5beda48a8a95e6165f79d7d8dcc33b1d5be
+Description: TermuX11 Display Manager
+ The definitive, bulletproof display manager for Termux VNC/X11 sessions.
+
+Package: termux-ezstore
+Architecture: all
+Version: 1.0
+Priority: optional
+Section: utils
+Maintainer: Superchavo
+Depends: wget, yad, root-repo, tur-repo, xfce4, tigervnc, nano
+Filename: ./pool/termux-ezstore-v1.deb
+Size: 2592
+MD5sum: 20942a14b1691a50b54a5e76c2ba286b
+SHA1: d86960c249b02e2a02480e30f83d484775701359
+SHA256: b2b0eb98296be849ded97a4498959b39fa7b594c81fe482e8839fee217a5b2cd
+SHA512: 68c2869e8e67df9b1c9df9b62917d10017d2e710b6b3c959ae4906778bea9c5e1842fa302eaac309f2ef7598ac836f4cae6e6e0014b244b80f38140b1e97c0a6
+Description: A graphical app store for Termux newbies.
+ Uses YAD to provide a simple interface for package management.
+

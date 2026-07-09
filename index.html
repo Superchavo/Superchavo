@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superchavo | Profile</title>
+    
+    <!-- Favicon actualizado a SVG -->
+    <link rel="icon" href="favi.svg" type="image/svg+xml">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Fondo agregado */
+        body {
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="xde-window" id="xdeWindow">
+        <div class="xde-header">
+            <div class="xde-title-container">
+                <span class="title">Xonsole — u0_github@localhost</span>
+            </div>
+            <div class="xde-buttons">
+                <span class="xde-btn minimize" id="btnMinimize" title="Minimize">&#8964;</span>
+                <span class="xde-btn maximize" id="btnMaximize" title="Full Screen">&#8963;</span>
+                <span class="xde-btn close" id="btnClose" title="Close">&#10005;</span>
+            </div>
+        </div>
+
+        <main class="terminal-body">
+            <div class="prompt-line">
+                <span class="user">u0_github@localhost</span>:<span class="dir">~</span>$ cat README.md
+            </div>
+
+            <section class="readme-content">
+                <h2>Hi There!!! 👋</h2>
+                 <img src="https://img.shields.io/badge/I%20love-KDE-blue?style=flat&logo=kde" alt="KDE">
+                <p>Hello and welcome to my Profile! I'm a KDE lover and also a Linux lover and I make things for Termux and Linux.</p>
+            </section>
+
+            <div class="prompt-line">
+                <span class="user">u0_github@localhost</span>:<span class="dir">~</span>$ ls -la ~/projects/
+            </div>
+
+            <div class="projects-list">
+                <a href="/NeeXtraRepo" class="project-item">
+                    <span class="item-icon">📦</span>
+                    <div class="item-info">
+                        <span class="item-name">NeeXtraRepo/</span>
+                        <span class="item-desc">Custom APT repository for Termux tools.</span>
+                    </div>
+                </a>
+
+                <a href="/scratch" target="_blank" class="project-item">
+                    <span class="item-icon">🧩</span>
+                    <div class="item-info">
+                        <span class="item-name">/scratch</span>
+                        <span class="item-desc">Redirect to my Scratch profile.</span>
+                    </div>
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-link">
+                <a href="https://github.com/Superchavo" target="_blank">github.com/Superchavo</a>
+            </div>
+        </footer>
+    </div>
+
+    <div class="xde-kicker">
+        <div class="kicker-start">
+            <!-- Icono favi.svg integrado en el Kicker -->
+            <img src="favi.svg" alt="XDE" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;">
+            <span class="kicker-text">XDE</span>
+        </div>
+        <div class="kicker-tasks">
+            <div class="task-item active">
+                <span>💻 Xonsole</span>
+            </div>
+        </div>
+        <div class="xde-systray">
+            <span class="tray-icon">📶</span>
+            <span class="tray-icon">🔊</span>
+            <span class="tray-clock" id="kickerClock">12:00</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
