@@ -4,11 +4,11 @@ Version: 6-morano
 Maintainer: NeeXtra Team
 Depends: python, python-tkinter, python-pillow, tigervnc, tigervnc-viewer
 Filename: ./pool/TermuxDM-v6-LTS-Codenamed-Morano.deb
-Size: 8536
-MD5sum: 97a2dc32d8a38769d350dd9aa654d72f
-SHA1: e7570f41e50d46e805398ce7fb4d4627ba4ed9f5
-SHA256: c21e71757f8c1e253f595d578677aa78d5d8aa7a6387f61e04f2b61f1b49f00e
-SHA512: 45909840eb7410368abfd048a1347d06edd6350fe6f711244fcdd85e77018d312fc58299b5c602148e63fb9ed452234608a60da02b80e732bf3513e961f27bae
+Size: 8516
+MD5sum: 73e362231ba8196a45a399624ccb0505
+SHA1: ad2494f20b3745b85cea248f5e1cf850803cd1e1
+SHA256: 9b7494a37d3e9ce2788c427a2a03b42b493ce88496e3ac02bb1e7bfaddf72f54
+SHA512: 34ad41588b34f45467ed8e92ac496bea399225d644f886e0cb819ed307824f1213e63c08561023490e0571e04598436758753997aa18ab1a43686038926c5bbc
 Description: The Termux Display Manager! the best dm for termux, also now rewriten some code so its better
 
 Package: bettersplash
