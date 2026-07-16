@@ -1,3 +1,16 @@
+Package: Termux-dm
+Architecture: all
+Version: 6-morano
+Maintainer: NeeXtra Team
+Depends: python, python-tkinter, python-pillow, tigervnc, tigervnc-viewer
+Filename: ./pool/TermuxDM-v6-LTS-Codenamed-Morano.deb
+Size: 8536
+MD5sum: 97a2dc32d8a38769d350dd9aa654d72f
+SHA1: e7570f41e50d46e805398ce7fb4d4627ba4ed9f5
+SHA256: c21e71757f8c1e253f595d578677aa78d5d8aa7a6387f61e04f2b61f1b49f00e
+SHA512: 45909840eb7410368abfd048a1347d06edd6350fe6f711244fcdd85e77018d312fc58299b5c602148e63fb9ed452234608a60da02b80e732bf3513e961f27bae
+Description: The Termux Display Manager! the best dm for termux, also now rewriten some code so its better
+
 Package: bettersplash
 Architecture: all
 Version: 1.0.0
@@ -41,21 +54,6 @@ SHA1: 598de65014cdf0052a18ace069b4dacc2963c805
 SHA256: ad42f49e762eb8198e3d3b3d183ac57188a1dbd26d35673e6158f4028e786ffa
 SHA512: 9d628c0a6496e9c7be4febfbe86eaa8ecb0c3b8d6010c5f05edd0f1cfc87beb9d14cd0f86d7bbc84cb734bd9f7ff99b38b9b43d872fcb007cd182037bcebc58d
 Description: GnuPG archive key for the NeeXtraRepo
-
-Package: termux-dm
-Architecture: all
-Version: 5.0-final
-Priority: optional
-Section: x11
-Maintainer: @termux
-Filename: ./pool/termux-dm_5.0-LTS-Support.deb
-Size: 5376
-MD5sum: f4bf8379d02ff27d73f9966899d6c389
-SHA1: a0d99699d8db3a72496b3382d920f2ff6f18ff56
-SHA256: f4a3bfbebdfe31febcfee164b9544d39599645b31444e81ff0183690cc3f35fc
-SHA512: 5dc75e162e1c7418a2e88876809ed32a992d5271e512b51255527bd3c4a2b6430a8fa0d183b68731530cc103de51b5beda48a8a95e6165f79d7d8dcc33b1d5be
-Description: TermuX11 Display Manager
- The definitive, bulletproof display manager for Termux VNC/X11 sessions.
 
 Package: termux-ezstore
 Architecture: all
