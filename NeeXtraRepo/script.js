@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (copyBtn) {
         copyBtn.addEventListener('click', () => {
-            const commandText = "git clone https://github.com/Superchavo/NeeXtraRepo.git && cd NeeXtraRepo && chmod +x installer.sh && ./installer.sh";
+            const commandText = "git clone https://github.com/Superchavo/Superchavo.git && cd Superchavo && cd NeeXtraRepo && chmod ./installer.sh && ./installer.sh";
             
             navigator.clipboard.writeText(commandText).then(() => {
                 // Estado copiado exitosamente
