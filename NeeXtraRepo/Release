@@ -1,29 +1,29 @@
 Architectures: aarch64 all
 Codename: neextra
 Components: neextra
-Date: Thu, 16 Jul 2026 19:52:05 +0000
+Date: Mon, 03 Aug 2026 22:56:15 +0000
 Description: The neextrarepo!
 Label: NeeXtra Repo
 Origin: NeeXtra Repo
 Suite: NeextraReleases
 Version: 1.0
 MD5Sum:
- 7bf0b559568cd4c5936917225ce4ee49             3051 Packages
- aee168533b4cf91c3736ae5e0f2960de             1652 Packages.gz
- d5647713cd4b6d5650a24e4f2e5377ba             1692 Packages.xz
- 9c070076bf1278f1197e11d54b02a2c7              210 Release
+ 2cc91456ba4f9d16d3e3d63e9c9fc819             3238 Packages
+ 54ffe92f96f656c48fe981a7b81b8e43             1729 Packages.gz
+ 20d5d3c43f407caa904d29191db99e44             1776 Packages.xz
+ c4c6e882069faeb0561df5713843fb72              210 Release
 SHA1:
- bcebd948eb870d541bb2757a870420629acb9041             3051 Packages
- 43b0db29b0a1b9a55b6b85eb22613ca0007c7f23             1652 Packages.gz
- fd7ad2f2295281a3fea4bfe10001d001c06af4b8             1692 Packages.xz
- 9e33e4382797085e6f689ede7271ddeb27f6e1d0              210 Release
+ 97d21fc05a97eef027dcc099461df16902df46e4             3238 Packages
+ 4a86a8f295862a5e8d51b95556072a7ec4fd7387             1729 Packages.gz
+ 0c14d680dedd9ce4170e828f3d16ec06efbc625b             1776 Packages.xz
+ 16de75017e2b6049b904d46a23bad3ed8f5de1e7              210 Release
 SHA256:
- 82fe5e05b92810c334a37fd67db15a6700c7efe325c410787e4532e1d3084b27             3051 Packages
- d358584ef9d3c12ee4a7b343a68360570609f4f46b9768e8f6e9f5851ec5955c             1652 Packages.gz
- 1e9d2da3d04ac73b2d01ca5d8517b2eadc9b34e1d44bc4d738516135cbb0c5e5             1692 Packages.xz
- 068f09a9ccee0b6f165d54a034aee1ad54c5785e80b2daf1d550dd794621c2be              210 Release
+ a2c2d02cf1ba8a7b2ada42274a5498077cc4fdb84da16a56bdbce645c9f43719             3238 Packages
+ 7808ff63663949447489c6b061fd680578cbeeb9f831e48a9a3574ed28e75409             1729 Packages.gz
+ d867f2a200f0a8918d7f8026562de2da3b98502e3cda527a945a942d8c00f15e             1776 Packages.xz
+ 9e91b7c0a64863897cfe2ea2037e54639a4a79beb534e6a9ba96252ec3c60ec7              210 Release
 SHA512:
- 26a26f9755a3bc06c03bd96f0824056465a163b909a91d90badfa9161811818c6f0158f62a50a86056ab30ea44cb07816f93a62bc32e7b47c4bc4c899beeaae2             3051 Packages
- 10e937c64031918693d9495446c45bcb18089d21dacd0a047adb0ae438e98a8c84151ba494c0d2509e18994d4fced4b0288b1968f33778dba65332d4baced040             1652 Packages.gz
- 8671b411808d101464bdbe37346214ca858cf5b02433dfcef40f916a81a782c6cb70383e027bbe692ed8f37c7f74d6f817476df3a0a37bd5e8e855d82fb2d91f             1692 Packages.xz
- dd6111ba70b444c3db5258f25ec3f79d5ccbf8ba5c7e218833810a431c1a0e0f0efdbb26587803ff0bde26a14c9671cf06645b589ab1904d8f6b8383e730294c              210 Release
+ c81fc0d06f40a7631957087b5b0b792e9fcbb5e05d8424d1940d9c0c3e5f10aaf1362fe124a7589eb1d04649dbcd1bc68d46beaded142fd4c130f369dcee1908             3238 Packages
+ 64a3e3160476198c41622e3cca615c1cf53478965fa1de7c1963eaa19b820113adc0205d88f68f31481d90fbe72bf1da05a2b94d7817da550653dbb9f94912ab             1729 Packages.gz
+ 3ef587a1cc576f1e2c9cdfff3a884033b10f4e08694fc0b7e8c9c1a0442dd87d2fb3b9e60cb1b5099ad6ad89a5e12474d9e48fb7ad5adc9bb6c2357706acb3df             1776 Packages.xz
+ e2e3142c8356468be2324a7fe0cd9119a736cbc748f0c1034974198b1948cf73c704e29d66138afffc69c81cb4c19c461b671ecc3d03651f4f44d0c0d3aaf835              210 Release
