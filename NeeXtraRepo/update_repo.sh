@@ -56,8 +56,10 @@ if ! command -v gpg &> /dev/null; then
     exit 1
 fi
 
-echo "Exporting GPG public key as NeextraKey.gpg..."
-gpg --armor --export > "$KEYRING_BUILD_DIR/data/data/com.termux/files/usr/etc/apt/keyrings/NeextraKey.gpg"
+echo "Exporting GPG public key cleanly (binary dearmored) as NeextraKey.gpg..."
+gpg --yes --output "$KEYRING_BUILD_DIR/data/data/com.termux/files/usr/etc/apt/keyrings/NeextraKey.gpg" --export 7798A3F5B776E1D3
+
+# Also copy a binary fallback copy into the root of NeeXtraRepo if needed for web downloads
 cp "$KEYRING_BUILD_DIR/data/data/com.termux/files/usr/etc/apt/keyrings/NeextraKey.gpg" "$REPO_DIR/NeextraKey.gpg"
 
 cat << CTRL > "$KEYRING_BUILD_DIR/DEBIAN/control"
@@ -120,21 +122,25 @@ cd ..
 echo "--- [5/6] Synchronizing with GitHub ---"
 git add .
 
-if git diff-index --quiet HEAD --; then
+if ! git diff-index --quiet HEAD --; then
+    echo ""
+    read -p "Enter your commit message: " commit_msg
+
+    if [ -z "$commit_msg" ]; then
+        commit_msg="UPDATE: Auto-bumped neextra-keyring to v$NEXT_VERSION with binary NeextraKey.gpg, and refreshed metadata"
+        echo "No message entered. Using default: '$commit_msg'"
+    fi
+
+    git commit -m "$commit_msg"
+    git push origin main
+else
     echo "No new changes to commit."
-    exit 0
 fi
 
-echo ""
-read -p "Enter your commit message: " commit_msg
-
-if [ -z "$commit_msg" ]; then
-    commit_msg="UPDATE: Auto-bumped neextra-keyring to v$NEXT_VERSION, exported NeextraKey.gpg, and refreshed repository metadata"
-    echo "No message entered. Using default: '$commit_msg'"
-fi
-
-git commit -m "$commit_msg"
-git push origin main
+echo "--- [6/6] Auto-updating local Termux keyring ---"
+mkdir -p "$PREFIX/etc/apt/keyrings"
+gpg --yes --output "$PREFIX/etc/apt/keyrings/NeextraKey.gpg" --export 7798A3F5B776E1D3
+echo "Local system keyring updated successfully."
 
 echo ""
 echo "--- Process completed successfully without errors! ---"
