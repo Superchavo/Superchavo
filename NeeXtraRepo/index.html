@@ -5,110 +5,338 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeeXtra Repo | Termux Package Repository</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --glass-bg: rgba(30, 41, 59, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.12);
+            --glass-shine: rgba(255, 255, 255, 0.05);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.3);
+            --code-bg: rgba(15, 23, 42, 0.85);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(129, 140, 248, 0.15) 0%, transparent 40%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* Banner Aero Style */
+        .banner-container {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.1);
+            border: 1px solid var(--glass-border);
+            background: var(--glass-bg);
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Main Glass Box (Aero Window) */
+        .repo-window {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 16px;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 var(--glass-shine);
+            overflow: hidden;
+        }
+
+        .repo-header {
+            padding: 24px 32px;
+            border-bottom: 1px solid var(--glass-border);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .welcome-text {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .repo-content {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* App List Styling */
+        .app-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+        .app-list li {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            padding: 14px 18px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .app-list li:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px var(--accent-glow);
+            transform: translateY(-2px);
+        }
+
+        .pkg-name {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .pkg-tag {
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 6px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            font-family: monospace;
+        }
+
+        /* Config Notes Boxes */
+        .config-box {
+            background: rgba(15, 23, 42, 0.5);
+            border-left: 4px solid var(--accent);
+            border-top: 1px solid var(--glass-border);
+            border-right: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 16px;
+            border-radius: 0 10px 10px 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .config-tag {
+            font-weight: bold;
+            color: var(--text-main);
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        .inline-code {
+            background: var(--code-bg);
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: var(--accent);
+            border: 1px solid var(--glass-border);
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--glass-border);
+            width: 100%;
+            margin: 8px 0;
+        }
+
+        /* Command Box / Installation Section */
+        .command-box {
+            background: var(--code-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .command-line {
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            overflow-x: auto;
+            white-space: nowrap;
+            flex-grow: 1;
+            padding: 4px 0;
+        }
+
+        .command-line::-webkit-scrollbar {
+            height: 4px;
+        }
+        .command-line::-webkit-scrollbar-thumb {
+            background: var(--glass-border);
+            border-radius: 2px;
+        }
+
+        .user { color: #f472b6; }
+        .host { color: #38bdf8; }
+        .dir { color: #a78bfa; }
+        .cmd { color: #4ade80; }
+
+        .copy-btn {
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px var(--accent-glow);
+            flex-shrink: 0;
+        }
+
+        .copy-btn:hover {
+            opacity: 0.95;
+            transform: scale(1.02);
+            box-shadow: 0 6px 16px rgba(56, 189, 248, 0.4);
+        }
+
+        .copy-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            padding-bottom: 10px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
         
-        <!-- Repo Banner -->
+        <!-- Banner del Repo con Estilo Aero -->
         <div class="banner-container">
             <img src="https://i.ibb.co/nNbWgq3V/Nee-Xtra-REPO-24-6-2026.png" alt="NeeXtra REPO">
         </div>
 
-        <!-- Unix Terminal Window -->
-        <div class="terminal-window">
-            <div class="terminal-header">
-                <div class="terminal-buttons">
-                    <span class="button btn-close" onclick="handleClose()"></span>
-                    <span class="button btn-minimize" onclick="handleMinimize()"></span>
-                    <span class="button btn-maximize" onclick="handleMaximize()"></span>
-                </div>
-                <div class="terminal-title">bash — superchavo@termux: ~</div>
-            </div>
-            
-            <div class="terminal-body">
+        <!-- Ventana Principal Aero -->
+        <div class="repo-window">
+            <div class="repo-header">
                 <p class="welcome-text">
                     Hello and welcome to the NeeXtra REPO! This repo contains 6 things (this will update as I get more apps):
                 </p>
-
-                <h2>📂 AVAILABLE PACKAGES</h2>
-                <ul class="app-list">
-                    <li><span class="pkg-name">NeeXtra Keyring</span> <span class="pkg-tag">[keyring]</span></li>
-                    <li><span class="pkg-name">Kalk</span> <span class="pkg-tag">[stable]</span></li>
-                    <li><span class="pkg-name">TDM</span> <span class="pkg-tag">[stable]</span></li>
-                    <li><span class="pkg-name">BetterSplash</span> <span class="pkg-tag">[stable]</span></li>
-                    <li><span class="pkg-name">Termux-ezstore</span> <span class="pkg-tag">[stable]</span></li>
-                </ul>
-
-                <div class="config-box">
-                    <span class="config-tag">NOTE</span>
-                    <p><strong>BetterSplash:</strong> To set 2 apps that you want to execute, you can use: <code class="inline-code">setbettersplashprogram</code></p>
+            </div>
+            
+            <div class="repo-content">
+                <div>
+                    <h2>📂 Available Packages</h2>
+                    <ul class="app-list">
+                        <li><span class="pkg-name">NeeXtra Keyring</span> <span class="pkg-tag">keyring</span></li>
+                        <li><span class="pkg-name">Kalk</span> <span class="pkg-tag">stable</span></li>
+                        <li><span class="pkg-name">TDM</span> <span class="pkg-tag">stable</span></li>
+                        <li><span class="pkg-name">BetterSplash</span> <span class="pkg-tag">stable</span></li>
+                        <li><span class="pkg-name">Termux-ezstore</span> <span class="pkg-tag">stable</span></li>
+                    </ul>
                 </div>
 
                 <div class="config-box">
-                    <span class="config-tag">NOTE</span>
-                    <p><strong>Xscreensaver:</strong> This package got removed because the Termux main repo now has this package, see: <code class="inline-code">https://github.com/termux/termux-packages/issues/30483</code></p>
+                    <span class="config-tag">NOTE: BetterSplash</span>
+                    <p>To set 2 apps that you want to execute, you can use: <code class="inline-code">setbettersplashprogram</code></p>
+                </div>
+
+                <div class="config-box">
+                    <span class="config-tag">NOTE: Xscreensaver</span>
+                    <p>This package got removed because the termux main repo now has this package, see: <a href="https://github.com/termux/termux-packages/issues/30483" target="_blank" style="color: var(--accent);">Issue #30483</a></p>
                 </div>
 
                 <div class="divider"></div>
 
-                <h2>📥 HOW TO INSTALL</h2>
-                <div class="command-box">
-                    <div class="command-line">
-                        <span class="user">superchavo</span><span class="host">@termux</span>:<span class="dir">~</span>$ <span class="cmd">git clone https://github.com/Superchavo/Superchavo.git && cd Superchavo && cd NeeXtraRepo && chmod ./installer.sh && ./installer.sh</span>
+                <div>
+                    <h2>📥 How to Install</h2>
+                    <div class="command-box">
+                        <div class="command-line" id="installCommand"><span class="user">superchavo</span><span class="host">@termux</span>:<span class="dir">~</span>$ <span class="cmd">git clone https://github.com/Superchavo/Superchavo.git && cd Superchavo && cd NeeXtraRepo && chmod +x ./installer.sh && ./installer.sh</span></div>
+                        <button id="copyBtn" class="copy-btn">Copy</button>
                     </div>
-                    <button id="copyBtn" class="copy-btn" onclick="copyCommand()">Copy</button>
                 </div>
 
             </div>
         </div>
 
         <footer>
-            Maintained by <a href="https://github.com/Superchavo" target="_blank">Superchavo</a> | Powered by is-a.dev
+            Maintained by <a href="https://github.com/Superchavo" target="_blank">Superchavo</a> &bull; Powered by is-a.dev
         </footer>
 
     </div>
 
     <script>
-        function handleClose() {
-            try {
-                // Logic to close the terminal
-                console.log("Terminal closed.");
-            } catch (error) {
-                console.error("Error closing terminal: ", error);
-            }
-        }
-
-        function handleMinimize() {
-            try {
-                // Logic to minimize the terminal
-                console.log("Terminal minimized.");
-            } catch (error) {
-                console.error("Error minimizing terminal: ", error);
-            }
-        }
-
-        function handleMaximize() {
-            try {
-                // Logic to maximize the terminal
-                console.log("Terminal maximized.");
-            } catch (error) {
-                console.error("Error maximizing terminal: ", error);
-            }
-        }
-
-        function copyCommand() {
-            try {
-                const command = document.querySelector('.cmd').textContent;
-                navigator.clipboard.writeText(command).then(() => {
-                    alert("Command copied to clipboard!");
-                });
-            } catch (error) {
-                console.error("Error copying command: ", error);
-                alert("Failed to copy command.");
-            }
-        }
+        document.getElementById('copyBtn').addEventListener('click', function() {
+            // Texto limpio sin las etiquetas HTML de color para el portapapeles
+            const commandText = "git clone https://github.com/Superchavo/Superchavo.git && cd Superchavo && cd NeeXtraRepo && chmod +x ./installer.sh && ./installer.sh";
+            
+            navigator.clipboard.writeText(commandText).then(() => {
+                const btn = document.getElementById('copyBtn');
+                const originalText = btn.textContent;
+                
+                btn.textContent = "Copied!";
+                btn.style.background = "linear-gradient(135deg, #22c55e, #16a34a)";
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = "linear-gradient(135deg, #38bdf8, #0284c7)";
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        });
     </script>
 </body>
 </html>
