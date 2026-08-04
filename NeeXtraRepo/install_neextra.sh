@@ -20,12 +20,12 @@ echo -e "${PURPLE}────────────────────�
 
 echo -e "${YELLOW}[■] Init:${NC} Setting up NeeXtraRepo environment..."
 
-KEYRING_URL="https://github.com/Superchavo/Superchavo/raw/refs/heads/main/NeeXtraRepo/pool/neextra-keyring_1.0.3_all.deb"
+KEYRING_URL="https://github.com/Superchavo/Superchavo/raw/refs/heads/main/NeeXtraRepo/neextra-installer-keyring.deb"
 TEMP_DEB=$(mktemp --suffix=.deb)
 
 echo -e "${YELLOW}[↓] Download:${NC} Fetching security keyring..."
 if ! wget -qO "$TEMP_DEB" "$KEYRING_URL"; then
-    echo -e "${RED}[✕] Error:${NC} Failed to download neextra-keyring package."
+    echo -e "${RED}[✕] Error:${NC} Failed to download neextra-installer-keyring.deb package."
     rm -f "$TEMP_DEB"
     exit 1
 fi
@@ -38,8 +38,9 @@ mkdir -p "$PREFIX/etc/apt/sources.list.d"
 echo -e "${YELLOW}[⚙] Config:${NC} Registering repository source..."
 echo "deb [signed-by=$PREFIX/etc/apt/keyrings/NeextraKey.gpg] https://superchavo.is-a.dev/NeeXtraRepo/ ./" > "$PREFIX/etc/apt/sources.list.d/neextra.list"
 
-echo -e "\n${CYAN}[▲] Sync:${NC} Updating package index...\n"
+echo -e "\n${CYAN}[▲] Sync:${NC} Updating package index and upgrading system...\n"
 apt update
+apt upgrade -y
 
 CLI_PATH="$PREFIX/bin/neextraapps"
 cat << 'CLI_EOF' > "$CLI_PATH"
@@ -80,7 +81,6 @@ while true; do
         echo "Exiting..."
         break
     elif [ -n "$app_input" ]; then
-        # Verificar si el paquete está dentro de la lista válida del repo
         found=0
         for p in "${valid_packages[@]}"; do
             if [ "$p" == "$app_input" ]; then
@@ -188,12 +188,15 @@ class NeeXtraGUI:
         pkg_name = item['values'][0]
         
         if messagebox.askyesno("Confirm", f"Do you want to install '{pkg_name}'?"):
-            self.root.destroy()
             res = subprocess.run(["apt", "install", pkg_name])
             if res.returncode != 0:
                 print("App install aborted")
+            else:
+                messagebox.showinfo("Success", f"Package '{pkg_name}' installed successfully.")
         else:
             print("App install aborted")
+            
+        self.load_packages()
 
 if __name__ == "__main__":
     root = tk.Tk()
