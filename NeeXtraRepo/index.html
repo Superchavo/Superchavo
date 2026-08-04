@@ -3,338 +3,517 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeeXtra Repo | Termux Package Repository</title>
+    <title>NeeXtra Repo | Professional Packages</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
+        /* =========================================
+           VARIABLES: Estilo Aero Profesional
+           ========================================= */
         :root {
-            --bg-color: #0f172a;
-            --glass-bg: rgba(30, 41, 59, 0.7);
-            --glass-border: rgba(255, 255, 255, 0.12);
-            --glass-shine: rgba(255, 255, 255, 0.05);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --accent-glow: rgba(56, 189, 248, 0.3);
-            --code-bg: rgba(15, 23, 42, 0.85);
+            --bg-base: #111827;
+            --glass-panel: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-hover: rgba(255, 255, 255, 0.08);
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --code-bg: rgba(0, 0, 0, 0.5);
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            box-sizing: border-box;
+            font-family: var(--font-family);
+            -webkit-font-smoothing: antialiased;
         }
 
         body {
-            background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(129, 140, 248, 0.15) 0%, transparent 40%);
-            color: var(--text-main);
+            background-color: var(--bg-base);
+            /* Fondo sutil y limpio */
+            background-image: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 40%),
+                              radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent 40%);
+            background-attachment: fixed;
+            color: var(--text-primary);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 2rem 1rem;
         }
 
-        .container {
+        /* =========================================
+           CONTENEDOR PRINCIPAL
+           ========================================= */
+        .app-container {
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
+            background: var(--glass-panel);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             display: flex;
             flex-direction: column;
-            gap: 24px;
-        }
-
-        /* Banner Aero Style */
-        .banner-container {
-            width: 100%;
-            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.1);
-            border: 1px solid var(--glass-border);
-            background: var(--glass-bg);
         }
 
-        .banner-container img {
+        /* Cabecera y Selector de Idioma */
+        .header {
+            padding: 24px 32px;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lang-selector {
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            outline: none;
+            backdrop-filter: blur(5px);
+        }
+
+        .lang-selector:focus {
+            border-color: var(--accent);
+        }
+
+        .banner {
             width: 100%;
-            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
             display: block;
         }
 
-        /* Main Glass Box (Aero Window) */
-        .repo-window {
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border);
-            border-top: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 16px;
-            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 var(--glass-shine);
-            overflow: hidden;
-        }
-
-        .repo-header {
-            padding: 24px 32px;
-            border-bottom: 1px solid var(--glass-border);
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .welcome-text {
+        .description {
+            color: var(--text-secondary);
             font-size: 1.05rem;
-            color: var(--text-muted);
             line-height: 1.6;
         }
 
-        .repo-content {
+        /* =========================================
+           CUERPO Y TARJETAS
+           ========================================= */
+        .content {
             padding: 32px;
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 36px;
         }
 
-        h2 {
-            font-size: 1.15rem;
-            letter-spacing: 0.05em;
-            color: var(--accent);
-            text-transform: uppercase;
-            margin-bottom: 12px;
+        .section-header {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
-        /* App List Styling */
-        .app-list {
-            list-style: none;
+        /* Grid de Paquetes */
+        .grid-packages {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 16px;
         }
 
-        .app-list li {
-            background: rgba(255, 255, 255, 0.03);
+        .pkg-card {
+            background: var(--glass-panel);
             border: 1px solid var(--glass-border);
-            padding: 14px 18px;
-            border-radius: 10px;
+            border-radius: 8px;
+            padding: 16px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
         }
 
-        .app-list li:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: var(--accent);
-            box-shadow: 0 4px 12px var(--accent-glow);
+        .pkg-card:hover {
+            background: var(--glass-hover);
+            border-color: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
 
-        .pkg-name {
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .pkg-tag {
+        .pkg-name { font-weight: 500; }
+        .pkg-badge {
             font-size: 0.75rem;
-            padding: 3px 8px;
-            border-radius: 6px;
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--accent);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            font-family: monospace;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* Config Notes Boxes */
-        .config-box {
-            background: rgba(15, 23, 42, 0.5);
-            border-left: 4px solid var(--accent);
-            border-top: 1px solid var(--glass-border);
-            border-right: 1px solid var(--glass-border);
-            border-bottom: 1px solid var(--glass-border);
+        /* Notas e Información */
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .info-card {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--glass-border);
+            border-left: 3px solid var(--accent);
+            border-radius: 6px;
             padding: 16px;
-            border-radius: 0 10px 10px 0;
+        }
+
+        .info-title {
+            font-weight: 600;
             font-size: 0.95rem;
-            color: var(--text-muted);
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .info-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
             line-height: 1.5;
         }
 
-        .config-tag {
-            font-weight: bold;
-            color: var(--text-main);
-            display: inline-block;
-            margin-bottom: 4px;
-        }
-
-        .inline-code {
+        code {
             background: var(--code-bg);
-            padding: 3px 6px;
+            padding: 2px 6px;
             border-radius: 4px;
-            font-family: monospace;
-            color: var(--accent);
-            border: 1px solid var(--glass-border);
+            font-family: 'Consolas', 'Monaco', monospace;
+            color: #93c5fd;
         }
 
-        .divider {
-            height: 1px;
-            background: var(--glass-border);
-            width: 100%;
-            margin: 8px 0;
-        }
-
-        /* Command Box / Installation Section */
-        .command-box {
-            background: var(--code-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
-        }
-
-        .command-line {
-            font-family: monospace;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            overflow-x: auto;
-            white-space: nowrap;
-            flex-grow: 1;
-            padding: 4px 0;
-        }
-
-        .command-line::-webkit-scrollbar {
-            height: 4px;
-        }
-        .command-line::-webkit-scrollbar-thumb {
-            background: var(--glass-border);
-            border-radius: 2px;
-        }
-
-        .user { color: #f472b6; }
-        .host { color: #38bdf8; }
-        .dir { color: #a78bfa; }
-        .cmd { color: #4ade80; }
-
-        .copy-btn {
-            background: linear-gradient(135deg, #38bdf8, #0284c7);
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 12px var(--accent-glow);
-            flex-shrink: 0;
-        }
-
-        .copy-btn:hover {
-            opacity: 0.95;
-            transform: scale(1.02);
-            box-shadow: 0 6px 16px rgba(56, 189, 248, 0.4);
-        }
-
-        .copy-btn:active {
-            transform: scale(0.98);
-        }
-
-        /* Footer Styling */
-        footer {
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            padding-bottom: 10px;
-        }
-
-        footer a {
+        .info-text a {
             color: var(--accent);
             text-decoration: none;
         }
+        .info-text a:hover { text-decoration: underline; }
 
-        footer a:hover {
-            text-decoration: underline;
+        /* =========================================
+           ZONA DE INSTALACIÓN (Terminal)
+           ========================================= */
+        .install-panel {
+            background: var(--code-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
         }
+
+        .command-wrap {
+            flex-grow: 1;
+            overflow-x: auto;
+            padding-bottom: 6px;
+        }
+        
+        .command-wrap::-webkit-scrollbar { height: 4px; }
+        .command-wrap::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 2px; }
+
+        .cmd-text {
+            font-family: 'Consolas', 'Monaco', monospace;
+            color: #10b981;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .btn-copy {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .btn-copy:hover { background: var(--accent-hover); }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--glass-border);
+            background: rgba(0,0,0,0.1);
+        }
+        .footer a { color: var(--accent); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="app-container">
         
-        <!-- Banner del Repo con Estilo Aero -->
-        <div class="banner-container">
-            <img src="https://i.ibb.co/nNbWgq3V/Nee-Xtra-REPO-24-6-2026.png" alt="NeeXtra REPO">
-        </div>
-
-        <!-- Ventana Principal Aero -->
-        <div class="repo-window">
-            <div class="repo-header">
-                <p class="welcome-text">
-                    Hello and welcome to the NeeXtra REPO! This repo contains 6 things (this will update as I get more apps):
-                </p>
+        <!-- Cabecera -->
+        <div class="header">
+            <div class="header-top">
+                <div style="font-weight: 600; font-size: 1.2rem; letter-spacing: 1px;">NEEXTRA REPO</div>
+                <!-- Selector de 9 idiomas -->
+                <select class="lang-selector" id="lang-select">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="zh">中文 (Chinese)</option>
+                    <option value="ja">日本語 (Japanese)</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="ru">Русский</option>
+                    <option value="pt">Português</option>
+                    <option value="ko">한국어 (Korean)</option>
+                </select>
             </div>
             
-            <div class="repo-content">
-                <div>
-                    <h2>📂 Available Packages</h2>
-                    <ul class="app-list">
-                        <li><span class="pkg-name">NeeXtra Keyring</span> <span class="pkg-tag">keyring</span></li>
-                        <li><span class="pkg-name">Kalk</span> <span class="pkg-tag">stable</span></li>
-                        <li><span class="pkg-name">TDM</span> <span class="pkg-tag">stable</span></li>
-                        <li><span class="pkg-name">BetterSplash</span> <span class="pkg-tag">stable</span></li>
-                        <li><span class="pkg-name">Termux-ezstore</span> <span class="pkg-tag">stable</span></li>
-                    </ul>
-                </div>
+            <img src="https://i.ibb.co/nNbWgq3V/Nee-Xtra-REPO-24-6-2026.png" alt="NeeXtra REPO" class="banner">
+            
+            <p class="description" data-i18n="desc">
+                Hello and welcome to the NeeXtra REPO! This repository currently hosts robust and stable packages, expanding as new tools are developed.
+            </p>
+        </div>
 
-                <div class="config-box">
-                    <span class="config-tag">NOTE: BetterSplash</span>
-                    <p>To set 2 apps that you want to execute, you can use: <code class="inline-code">setbettersplashprogram</code></p>
-                </div>
-
-                <div class="config-box">
-                    <span class="config-tag">NOTE: Xscreensaver</span>
-                    <p>This package got removed because the termux main repo now has this package, see: <a href="https://github.com/termux/termux-packages/issues/30483" target="_blank" style="color: var(--accent);">Issue #30483</a></p>
-                </div>
-
-                <div class="divider"></div>
-
-                <div>
-                    <h2>📥 How to Install</h2>
-                    <div class="command-box">
-                        <div class="command-line" id="installCommand"><span class="user">superchavo</span><span class="host">@termux</span>:<span class="dir">~</span>$ <span class="cmd">git clone https://github.com/Superchavo/Superchavo.git && cd Superchavo && cd NeeXtraRepo && chmod +x ./installer.sh && ./installer.sh</span></div>
-                        <button id="copyBtn" class="copy-btn">Copy</button>
+        <!-- Cuerpo -->
+        <div class="content">
+            
+            <!-- Paquetes -->
+            <div>
+                <h2 class="section-header" data-i18n="packages">📂 Available Packages</h2>
+                <div class="grid-packages">
+                    <div class="pkg-card">
+                        <span class="pkg-name">NeeXtra Keyring</span><span class="pkg-badge">keyring</span>
+                    </div>
+                    <div class="pkg-card">
+                        <span class="pkg-name">Kalk</span><span class="pkg-badge" data-i18n="stable">stable</span>
+                    </div>
+                    <div class="pkg-card">
+                        <span class="pkg-name">TDM</span><span class="pkg-badge" data-i18n="stable">stable</span>
+                    </div>
+                    <div class="pkg-card">
+                        <span class="pkg-name">BetterSplash</span><span class="pkg-badge" data-i18n="stable">stable</span>
+                    </div>
+                    <div class="pkg-card">
+                        <span class="pkg-name">Termux-ezstore</span><span class="pkg-badge" data-i18n="stable">stable</span>
                     </div>
                 </div>
-
             </div>
+
+            <!-- Notas -->
+            <div class="notes-grid">
+                <div class="info-card">
+                    <div class="info-title" data-i18n="note1_title">📝 Note: BetterSplash</div>
+                    <div class="info-text" data-i18n="note1_text">To set 2 applications that you want to execute sequentially, use: <code>setbettersplashprogram</code></div>
+                </div>
+                <div class="info-card">
+                    <div class="info-title" data-i18n="note2_title">⚠️ Note: Xscreensaver</div>
+                    <div class="info-text">
+                        <span data-i18n="note2_text">Removed because Termux main repository now includes it natively. See:</span> 
+                        <a href="https://github.com/termux/termux-packages/issues/30483" target="_blank">Issue #30483</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instalación -->
+            <div>
+                <h2 class="section-header" data-i18n="install">📥 How to Install</h2>
+                <div class="install-panel">
+                    <div class="command-wrap">
+                        <div class="cmd-text" id="cmd-text">cd /data/data/com.termux/files/home/downloads && git clone https://github.com/Superchavo/Superchavo.git && cd Superchavo/NeeXtraRepo && chmod +x ./installer.sh && ./installer.sh</div>
+                    </div>
+                    <button class="btn-copy" id="copy-btn" data-i18n="copy">Copy</button>
+                </div>
+            </div>
+
         </div>
 
-        <footer>
-            Maintained by <a href="https://github.com/Superchavo" target="_blank">Superchavo</a> &bull; Powered by is-a.dev
-        </footer>
-
+        <!-- Footer -->
+        <div class="footer">
+            <span data-i18n="maintained">Maintained by</span> <a href="https://github.com/Superchavo" target="_blank">Superchavo</a> | Powered by is-a.dev
+        </div>
     </div>
 
+    <!-- =========================================
+         SCRIPT: Internacionalización (i18n) y Copia
+         ========================================= -->
     <script>
-        document.getElementById('copyBtn').addEventListener('click', function() {
-            // Texto limpio sin las etiquetas HTML de color para el portapapeles
-            const commandText = "git clone https://github.com/Superchavo/Superchavo.git && cd Superchavo && cd NeeXtraRepo && chmod +x ./installer.sh && ./installer.sh";
+        // 1. Diccionario de Traducciones (9 Idiomas)
+        const translations = {
+            en: {
+                desc: "Hello and welcome to the NeeXtra REPO! This repository currently hosts robust and stable packages, expanding as new tools are developed.",
+                packages: "📂 Available Packages",
+                stable: "stable",
+                note1_title: "📝 Note: BetterSplash",
+                note1_text: "To set 2 applications that you want to execute sequentially, use: <code>setbettersplashprogram</code>",
+                note2_title: "⚠️ Note: Xscreensaver",
+                note2_text: "Removed because Termux main repository now includes it natively. See:",
+                install: "📥 How to Install",
+                copy: "Copy",
+                copied: "Copied!",
+                maintained: "Maintained by"
+            },
+            es: {
+                desc: "¡Hola y bienvenido a NeeXtra REPO! Este repositorio aloja paquetes robustos y estables, expandiéndose a medida que se desarrollan nuevas herramientas.",
+                packages: "📂 Paquetes Disponibles",
+                stable: "estable",
+                note1_title: "📝 Nota: BetterSplash",
+                note1_text: "Para establecer 2 aplicaciones que desees ejecutar secuencialmente, usa: <code>setbettersplashprogram</code>",
+                note2_title: "⚠️ Nota: Xscreensaver",
+                note2_text: "Eliminado porque el repositorio principal de Termux ahora lo incluye nativamente. Ver:",
+                install: "📥 Cómo Instalar",
+                copy: "Copiar",
+                copied: "¡Copiado!",
+                maintained: "Mantenido por"
+            },
+            zh: {
+                desc: "您好，欢迎来到 NeeXtra REPO！该存储库目前托管稳定可靠的软件包，并随着新工具的开发而扩展。",
+                packages: "📂 可用软件包",
+                stable: "稳定",
+                note1_title: "📝 注意: BetterSplash",
+                note1_text: "要设置您希望按顺序执行的2个应用程序，请使用: <code>setbettersplashprogram</code>",
+                note2_title: "⚠️ 注意: Xscreensaver",
+                note2_text: "已删除，因为 Termux 主存储库现在原生包含它。请参阅:",
+                install: "📥 如何安装",
+                copy: "复制",
+                copied: "已复制！",
+                maintained: "维护者"
+            },
+            ja: {
+                desc: "こんにちは、NeeXtra REPOへようこそ！このリポジトリは現在、安定した堅牢なパッケージをホストしており、新しいツールが開発されるにつれて拡張されます。",
+                packages: "📂 利用可能なパッケージ",
+                stable: "安定",
+                note1_title: "📝 メモ: BetterSplash",
+                note1_text: "順番に実行したい2つのアプリケーションを設定するには、次を使用します: <code>setbettersplashprogram</code>",
+                note2_title: "⚠️ メモ: Xscreensaver",
+                note2_text: "Termuxのメインリポジトリにネイティブに含まれるようになったため、削除されました。参照:",
+                install: "📥 インストール方法",
+                copy: "コピー",
+                copied: "コピーしました！",
+                maintained: "保守"
+            },
+            fr: {
+                desc: "Bonjour et bienvenue sur le NeeXtra REPO ! Ce dépôt héberge actuellement des paquets robustes et stables, et s'étendra à mesure que de nouveaux outils seront développés.",
+                packages: "📂 Paquets Disponibles",
+                stable: "stable",
+                note1_title: "📝 Note: BetterSplash",
+                note1_text: "Pour définir 2 applications que vous souhaitez exécuter séquentiellement, utilisez : <code>setbettersplashprogram</code>",
+                note2_title: "⚠️ Note: Xscreensaver",
+                note2_text: "Supprimé car le dépôt principal de Termux l'inclut désormais nativement. Voir :",
+                install: "📥 Comment Installer",
+                copy: "Copier",
+                copied: "Copié !",
+                maintained: "Maintenu par"
+            },
+            de: {
+                desc: "Hallo und willkommen beim NeeXtra REPO! Dieses Repository hostet derzeit robuste und stabile Pakete und wird erweitert, wenn neue Tools entwickelt werden.",
+                packages: "📂 Verfügbare Pakete",
+                stable: "stabil",
+                note1_title: "📝 Hinweis: BetterSplash",
+                note1_text: "Um 2 Anwendungen festzulegen, die nacheinander ausgeführt werden sollen, verwenden Sie: <code>setbettersplashprogram</code>",
+                note2_title: "⚠️ Hinweis: Xscreensaver",
+                note2_text: "Entfernt, da das Termux-Hauptrepository dies nun nativ enthält. Siehe:",
+                install: "📥 Wie man installiert",
+                copy: "Kopieren",
+                copied: "Kopiert!",
+                maintained: "Gepflegt von"
+            },
+            ru: {
+                desc: "Здравствуйте и добро пожаловать в NeeXtra REPO! Этот репозиторий в настоящее время содержит надежные и стабильные пакеты, расширяясь по мере разработки новых инструментов.",
+                packages: "📂 Доступные пакеты",
+                stable: "стабильный",
+                note1_title: "📝 Примечание: BetterSplash",
+                note1_text: "Чтобы установить 2 приложения, которые вы хотите выполнить последовательно, используйте: <code>setbettersplashprogram</code>",
+                note2_title: "⚠️ Примечание: Xscreensaver",
+                note2_text: "Удалено, так как основной репозиторий Termux теперь включает его изначально. Смотрите:",
+                install: "📥 Как установить",
+                copy: "Копировать",
+                copied: "Скопировано!",
+                maintained: "Поддерживается"
+            },
+            pt: {
+                desc: "Olá e bem-vindo ao NeeXtra REPO! Este repositório hospeda atualmente pacotes robustos e estáveis, expandindo-se à medida que novas ferramentas são desenvolvidas.",
+                packages: "📂 Pacotes Disponíveis",
+                stable: "estável",
+                note1_title: "📝 Nota: BetterSplash",
+                note1_text: "Para definir 2 aplicativos que você deseja executar sequencialmente, use: <code>setbettersplashprogram</code>",
+                note2_title: "⚠️ Nota: Xscreensaver",
+                note2_text: "Removido porque o repositório principal do Termux agora o inclui nativamente. Veja:",
+                install: "📥 Como Instalar",
+                copy: "Copiar",
+                copied: "Copiado!",
+                maintained: "Mantido por"
+            },
+            ko: {
+                desc: "안녕하세요 NeeXtra REPO에 오신 것을 환영합니다! 이 저장소는 현재 안정적이고 강력한 패키지를 호스팅하며 새로운 도구가 개발됨에 따라 확장됩니다.",
+                packages: "📂 사용 가능한 패키지",
+                stable: "안정적인",
+                note1_title: "📝 참고: BetterSplash",
+                note1_text: "순차적으로 실행하려는 2개의 애플리케이션을 설정하려면 다음을 사용하십시오: <code>setbettersplashprogram</code>",
+                note2_title: "⚠️ 참고: Xscreensaver",
+                note2_text: "Termux 기본 저장소에 이제 기본적으로 포함되어 있으므로 제거되었습니다. 참조:",
+                install: "📥 설치 방법",
+                copy: "복사",
+                copied: "복사됨!",
+                maintained: "유지 관리"
+            }
+        };
+
+        // 2. Lógica para cambiar de idioma
+        const langSelect = document.getElementById('lang-select');
+        let currentLang = 'en'; // Idioma por defecto
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            const elements = document.querySelectorAll('[data-i18n]');
             
-            navigator.clipboard.writeText(commandText).then(() => {
-                const btn = document.getElementById('copyBtn');
-                const originalText = btn.textContent;
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                // Si el elemento es un botón, usamos textContent, si tiene HTML usamos innerHTML
+                if(translations[lang][key]) {
+                    if (el.tagName === 'DIV' || el.tagName === 'P') {
+                        el.innerHTML = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+        }
+
+        langSelect.addEventListener('change', (e) => {
+            changeLanguage(e.target.value);
+        });
+
+        // 3. Lógica del Botón de Copiado
+        const copyBtn = document.getElementById('copy-btn');
+        const cmdText = document.getElementById('cmd-text').innerText;
+
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(cmdText).then(() => {
+                const originalBg = copyBtn.style.background;
                 
-                btn.textContent = "Copied!";
-                btn.style.background = "linear-gradient(135deg, #22c55e, #16a34a)";
-                
+                // Usamos el diccionario actual para mostrar el texto de "Copiado"
+                copyBtn.textContent = translations[currentLang]['copied'];
+                copyBtn.style.background = "#10b981"; // Verde éxito
+
                 setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.style.background = "linear-gradient(135deg, #38bdf8, #0284c7)";
+                    // Restauramos el texto de "Copiar"
+                    copyBtn.textContent = translations[currentLang]['copy'];
+                    copyBtn.style.background = originalBg;
                 }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
             });
         });
     </script>
