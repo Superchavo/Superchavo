@@ -188,7 +188,7 @@ class NeeXtraGUI:
         pkg_name = item['values'][0]
         
         if messagebox.askyesno("Confirm", f"Do you want to install '{pkg_name}'?"):
-            res = subprocess.run(["apt", "install", pkg_name])
+            res = subprocess.run(["apt", "install", "-y", pkg_name"])
             if res.returncode != 0:
                 print("App install aborted")
             else:
