@@ -45,18 +45,18 @@ Description: Kalk, the new calculator for KDE
 
 Package: neextra-keyring
 Architecture: all
-Version: 1.0.5
+Version: 1.0.6
 Priority: optional
 Section: admin
 Maintainer: NeeXtra Repo
 Installed-Size: 50
 Depends: gnupg
-Filename: ./pool/neextra-keyring_1.0.5_all.deb
+Filename: ./pool/neextra-keyring_1.0.6_all.deb
 Size: 3248
-MD5sum: 79cdb00494abd908f98ab1909af883d8
-SHA1: 3448503d2da576a0ad169872ce9cca4160041e56
-SHA256: 4e709d814dd2a57d933c40dfc93939dc0778b640ffea856b04153de0dea2f6e3
-SHA512: bf1b71295eec9b9c351707cec2137526ccfd44aa37e0b8351db141faeb25dc34b3dac530541b5f5cc25a7da8e8d0fc3585fe2b5bee7c3ecf3a4d22a0549b1c8d
+MD5sum: f864bd74e2105dfa54877da43ff08ea5
+SHA1: cfc4a01091471cdaa2debf9b6a9fbcc757be48a6
+SHA256: 1dbffa0cac490d437ca13975a089b88eb7fad2714dd49246d3220c7211461130
+SHA512: fee52772108baa46b18f288230fa3f1bb1c473e70867eebb924b3e0fc9253ca03541061ea540302c6dca4a6182d22d4555437bba43ad74721415f6f4afeaffbd
 Homepage: https://github.com/Superchavo/Superchavo
 Description: GPG key archive for NeeXtra Repo
  This package contains the digital signature public key (NeextraKey.gpg) used to verify NeeXtra Repo packages.
