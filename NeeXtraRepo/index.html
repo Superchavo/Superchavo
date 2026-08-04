@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +11,18 @@
 
     <div class="container">
         
-        <!-- Banner del Repo -->
+        <!-- Repo Banner -->
         <div class="banner-container">
             <img src="https://i.ibb.co/nNbWgq3V/Nee-Xtra-REPO-24-6-2026.png" alt="NeeXtra REPO">
         </div>
 
-        <!-- Consola Unix / Terminal Real -->
+        <!-- Unix Terminal Window -->
         <div class="terminal-window">
             <div class="terminal-header">
                 <div class="terminal-buttons">
-                    <span class="button btn-close"></span>
-                    <span class="button btn-minimize"></span>
-                    <span class="button btn-maximize"></span>
+                    <span class="button btn-close" onclick="handleClose()"></span>
+                    <span class="button btn-minimize" onclick="handleMinimize()"></span>
+                    <span class="button btn-maximize" onclick="handleMaximize()"></span>
                 </div>
                 <div class="terminal-title">bash — superchavo@termux: ~</div>
             </div>
@@ -48,7 +48,7 @@
 
                 <div class="config-box">
                     <span class="config-tag">NOTE</span>
-                    <p><strong>Xscreensaver:</strong> This package got removed bc the termux main repo now has this package, see: <code class="inline-code">https://github.com/termux/termux-packages/issues/30483</code></p>
+                    <p><strong>Xscreensaver:</strong> This package got removed because the Termux main repo now has this package, see: <code class="inline-code">https://github.com/termux/termux-packages/issues/30483</code></p>
                 </div>
 
                 <div class="divider"></div>
@@ -58,19 +58,57 @@
                     <div class="command-line">
                         <span class="user">superchavo</span><span class="host">@termux</span>:<span class="dir">~</span>$ <span class="cmd">git clone https://github.com/Superchavo/Superchavo.git && cd Superchavo && cd NeeXtraRepo && chmod ./installer.sh && ./installer.sh</span>
                     </div>
-                    <button id="copyBtn" class="copy-btn">Copy</button>
+                    <button id="copyBtn" class="copy-btn" onclick="copyCommand()">Copy</button>
                 </div>
 
             </div>
         </div>
 
         <footer>
-            Maintained by <a href="The Awesome Team of github and Is A Dev and also Superchavo" target="_blank">Superchavo</a> | Powered by is-a.dev
+            Maintained by <a href="https://github.com/Superchavo" target="_blank">Superchavo</a> | Powered by is-a.dev
         </footer>
 
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function handleClose() {
+            try {
+                // Logic to close the terminal
+                console.log("Terminal closed.");
+            } catch (error) {
+                console.error("Error closing terminal: ", error);
+            }
+        }
+
+        function handleMinimize() {
+            try {
+                // Logic to minimize the terminal
+                console.log("Terminal minimized.");
+            } catch (error) {
+                console.error("Error minimizing terminal: ", error);
+            }
+        }
+
+        function handleMaximize() {
+            try {
+                // Logic to maximize the terminal
+                console.log("Terminal maximized.");
+            } catch (error) {
+                console.error("Error maximizing terminal: ", error);
+            }
+        }
+
+        function copyCommand() {
+            try {
+                const command = document.querySelector('.cmd').textContent;
+                navigator.clipboard.writeText(command).then(() => {
+                    alert("Command copied to clipboard!");
+                });
+            } catch (error) {
+                console.error("Error copying command: ", error);
+                alert("Failed to copy command.");
+            }
+        }
+    </script>
 </body>
 </html>
-
