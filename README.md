@@ -1,5 +1,5 @@
 ## Hi There!!! 👋
-![Static Badge](https://img.shields.io/badge/I_Love-KDE-blue)
+![I love kde and hate gnome or gtk5/4](https://img.shields.io/badge/I_Love-KDE-blue?style=for-the-badge&logo=kde&logoColor=white&link=Left%20kde.org)
  
 Hello and welcome to my Profile! im a kde lover and also a linux lover and i make things for termux and linux
  
