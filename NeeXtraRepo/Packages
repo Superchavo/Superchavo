@@ -1,16 +1,3 @@
-Package: Termux-dm
-Architecture: all
-Version: 6-morano
-Maintainer: NeeXtra Team
-Depends: python, python-tkinter, python-pillow, tigervnc, tigervnc-viewer
-Filename: ./pool/TermuxDM-v6-LTS-Codenamed-Morano.deb
-Size: 8516
-MD5sum: 73e362231ba8196a45a399624ccb0505
-SHA1: ad2494f20b3745b85cea248f5e1cf850803cd1e1
-SHA256: 9b7494a37d3e9ce2788c427a2a03b42b493ce88496e3ac02bb1e7bfaddf72f54
-SHA512: 34ad41588b34f45467ed8e92ac496bea399225d644f886e0cb819ed307824f1213e63c08561023490e0571e04598436758753997aa18ab1a43686038926c5bbc
-Description: The Termux Display Manager! the best dm for termux, also now rewriten some code so its better
-
 Package: bettersplash
 Architecture: all
 Version: 1.0.0
@@ -45,21 +32,34 @@ Description: Kalk, the new calculator for KDE
 
 Package: neextra-keyring
 Architecture: all
-Version: 1.0.6
+Version: 1.0.8
 Priority: optional
 Section: admin
 Maintainer: NeeXtra Repo
 Installed-Size: 50
 Depends: gnupg
-Filename: ./pool/neextra-keyring_1.0.6_all.deb
-Size: 3248
-MD5sum: f864bd74e2105dfa54877da43ff08ea5
-SHA1: cfc4a01091471cdaa2debf9b6a9fbcc757be48a6
-SHA256: 1dbffa0cac490d437ca13975a089b88eb7fad2714dd49246d3220c7211461130
-SHA512: fee52772108baa46b18f288230fa3f1bb1c473e70867eebb924b3e0fc9253ca03541061ea540302c6dca4a6182d22d4555437bba43ad74721415f6f4afeaffbd
+Filename: ./pool/neextra-keyring_1.0.8_all.deb
+Size: 3252
+MD5sum: c9d5151b89608121c5a3ec8401e792b9
+SHA1: c2287da221b573172dbf0f7761fab033e0db3018
+SHA256: 8c41db11129affb7f109bbe570b5731fc96fc88a16bed8a0f3e8aaa8104aa91d
+SHA512: f69f50a04f565487e27606d5b392220e1f15dbccf126f76f5999cd73cb073bf2d72d00f899b3a9e992cb4dc84b0e9ffee858eae7a00bb529d6be8afc39eb5dbe
 Homepage: https://github.com/Superchavo/Superchavo
 Description: GPG key archive for NeeXtra Repo
  This package contains the digital signature public key (NeextraKey.gpg) used to verify NeeXtra Repo packages.
+
+Package: Termux-dm
+Architecture: all
+Version: 6.1-aurora
+Maintainer: NeeXtra Team
+Depends: python, python-tkinter, python-pillow, tigervnc, tigervnc-viewer
+Filename: ./pool/tdm-version-v6.1-codenamed-aurora.deb
+Size: 9488
+MD5sum: fc51d7ef7d1a8f3eaa995173d03ce248
+SHA1: a0ce378060309a1a439ad3cd8e6592de1b51edec
+SHA256: ed27d59189e55d955f860e58d9ae128dac200d39e28ebceb9b016f031282e3a7
+SHA512: bd1e3ad9003a1e6aa25e0382a0b68b5572226c8e65a0a993ec770535e8feaf89a46793569fa872d68520ab17f62aa0bbcd82e7da8bd1a04fa626688f09da75ee
+Description: The Termux Display Manager! the best dm for termux, also now rewriten some code so its better and with 6.1, we fixed some things
 
 Package: termux-ezstore
 Architecture: all
