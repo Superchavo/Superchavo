@@ -57,7 +57,7 @@ if ! command -v gpg &> /dev/null; then
 fi
 
 echo "Exporting GPG public key cleanly (binary dearmored) as NeextraKey.gpg..."
-gpg --yes --output "$KEYRING_BUILD_DIR/data/data/com.termux/files/usr/etc/apt/keyrings/NeextraKey.gpg" --export 7798A3F5B776E1D3
+gpg --yes --output "$KEYRING_BUILD_DIR/data/data/com.termux/files/usr/etc/apt/keyrings/NeextraKey.gpg" --export D8CF21131039A2C0DA23FC8B9DFB32C6D4D6C225
 
 # Also copy a binary fallback copy into the root of NeeXtraRepo if needed for web downloads
 cp "$KEYRING_BUILD_DIR/data/data/com.termux/files/usr/etc/apt/keyrings/NeextraKey.gpg" "$REPO_DIR/NeextraKey.gpg"
@@ -139,7 +139,7 @@ fi
 
 echo "--- [6/6] Auto-updating local Termux keyring ---"
 mkdir -p "$PREFIX/etc/apt/keyrings"
-gpg --yes --output "$PREFIX/etc/apt/keyrings/NeextraKey.gpg" --export 7798A3F5B776E1D3
+gpg --yes --output "$PREFIX/etc/apt/keyrings/NeextraKey.gpg" --export D8CF21131039A2C0DA23FC8B9DFB32C6D4D6C225
 echo "Local system keyring updated successfully."
 
 echo ""
