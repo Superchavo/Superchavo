@@ -4,46 +4,46 @@ Hash: SHA256
 Architectures: aarch64 all
 Codename: neextra
 Components: neextra
-Date: Mon, 31 Aug 2026 02:06:57 +0000
+Date: Tue, 01 Sep 2026 01:08:46 +0000
 Description: The neextrarepo!
 Label: NeeXtra Repo
 Origin: NeeXtra Repo
 Suite: NeextraReleases
 Version: 1.0
 MD5Sum:
- 68dc491d8ed74ca109eec874bd851dba             3278 Packages
- ebea82be77fff33d0145d994a156e05a             1755 Packages.gz
- 5ebba47310aa5ffe0b4c9a705bacdb00             1804 Packages.xz
- 4a5a11498f3f39d70bf819ffe2020b14              210 Release
+ 48f330cd9b4f323f65ca1609567a31a2             3278 Packages
+ 88c0c5728ca66c471bde6d49ac1817f0             1755 Packages.gz
+ 6380a83e8a0ab7d14c9bcbcccfee2639             1808 Packages.xz
+ 456a1024ea71f2f89dc47d3b2625bd0f              210 Release
 SHA1:
- beb9c0b50d14764cefa6cc150b4acb7066378777             3278 Packages
- 3b5c1bcdcfe443f3bca6c82e5128dbb5413be939             1755 Packages.gz
- f4e2d801c1053ea5d3cd24d0cf53e413c9b3d604             1804 Packages.xz
- 68ba7dacbd91c17190e1ab5d499127a75bbbada0              210 Release
+ 9ae94ce4fb5a7987155cda0458b3aab6c67e324d             3278 Packages
+ 8a770ab1cace7b7856ee9f6d59688a88cc35b318             1755 Packages.gz
+ d16debadc4d5cb54611861fd5a58f77389863327             1808 Packages.xz
+ 33f8275f83411d1cf6fbdd53cde5497016f8796f              210 Release
 SHA256:
- 5ffc91982850286dea3c32732a3c28fae83d2e10586dc9c93074a0f607dc350e             3278 Packages
- cf344a0e098e84cb8107d05a02189c4b804aeed750299211a1b72c84f30e0151             1755 Packages.gz
- 517818abef2bb4f3b12de1006af3c2ad98492299a0f82ddf2be535d4a1953834             1804 Packages.xz
- a2d96249eb2b3bf3883f4a1266250acd5a3992240969d6aa6216049fdc2de190              210 Release
+ 74d00780084b7ae8b28591916af4ae186ee9c5dd06358138e5fa6ced9c4e3915             3278 Packages
+ 0bf2953260fafa51aec0fd164eb15c12e4106c7b01ce7a8d91bd8756af0c6e9c             1755 Packages.gz
+ c355b79d35dc78a7e9c5fd5bc3f4fe4296753a9251c9078841873c49f4c237cc             1808 Packages.xz
+ f54914bab27d3b2dada6a7a4411118ffa836c00746eb716ddd4a41add902037f              210 Release
 SHA512:
- 3a73dd20a1dec243e9459b1893fff9d05e7777721f87be7a1d09ddc8c5fb850d838264012023f176fdcbf0e5c8edf484db0198edfd224aa6a9d86cc83263c935             3278 Packages
- 4a28014817a7a2fd8a3e0e549d828489886699f7c6a1c832d12a78a012de34b2681e451e9d79f55265f340c5b56849ea790c66fff440ec1bf1defb1738860371             1755 Packages.gz
- 71471e7d939e2106b95d303748183d15bbeb21b51124003ddb6d58cbb53049ab8f1083ecf1845ed0ffa81fa4f7847ccb8b14f0853e02d1578029f5c2c4dd2b6e             1804 Packages.xz
- f32267a8c8567208a59be120790583e99ef90efe0de1c76eb18ff4eb69ed467bfc53e9828a01f44146158fa54f776f33d143ed32bde0b7ac85c9ac96bbc6bcd6              210 Release
+ a511697ffd30c893337711db3e0381a3cff47ea69fea882dab3711f43307aed1df00743fc8313f12e068143c53e5311ef12867687d21e9226aeaaeccfda941ab             3278 Packages
+ 993fd3fb2be4a45c9bceb7057d879c0423286c1c60941d0c2f7237df34cee3f26d81aee054db363b19e6e28a68f4f5092e324dfa2602a88998a4dbadf69bcf62             1755 Packages.gz
+ 0c3cffdbf216569e66be1f0599affd11337d612219092c780ca743d0b3903e27b420046aa56925c1bfb9e197773b856225d63dc229858fa7e7d231798881b971             1808 Packages.xz
+ f11ba56e8010734796319554a6abc9ef10d89e4357796ebea8e4dd779197d81fedeec39c41bb0d8fb672590915a394b4ec84a1e4478e421003a6c8a0ce2e2491              210 Release
 -----BEGIN PGP SIGNATURE-----
 
-iQJPBAEBCAA5FiEE2M8hExA5osDaI/yLnfsyxtTWwiUFAmqU4cEbFIAAAAAABAAO
-bWFudTIsMi41KzEuMTIsMywyAAoJEJ37MsbU1sIlwpkQALNXlni+j2DAw86jGVSg
-p/DI8DbKY6j2T3WuO9Ojp83qyw/NJ/PFouqWQLw1I7mG0p36p1+lEWZgg2JkQ+Ay
-ls1P3YLbajsShxS3I+zcDbyaDUKJ++9QKN+Lm09Ab6CJMXa7YNQaUTj3zKk1b16S
-4450IZ5G+a9eTlwczALXVC2Aq575jnTHXySx2xVeII7EogP1BEoDdIfKUl2Ck8JZ
-wLYKdzLqLdGE/xYngHbIm9nzXd4gXyCLT4dzJuBZD292xw3LqOT/EWrG97iUrXid
-Ksewo2oTISRe05xxLgGkeRh1sj7Wpfohh9UztwLBz7hYPIOz26Ewh7Vzkn4gFe8T
-8pwr5IhqUh5KAN6qAQ8BOdirVDF4/VviE0YZpd5euFtfWuV+GWqwwpqIYXTj4eLn
-GdGUGMP5YCsG1ICBPw0gsO13AWTDY4xG7BCItTGtqpBbNVkyFGc10ibEB8YKmU2o
-8bNVF/vpMiHhxC3PhvPFx+VsBcH8+uTSKePxDtnQkARpFpaXwtR1SeXQRCeIXoeE
-sWMayehmbIQkaYaVhKfr5WKr48FJW63lH74R7Z/0O/zogQ8K++UXNjyanbWVdw+t
-A2ZrIOpkOTGhdu5KQgWgsLzw6ZkRcwJ7lPT4hIXrjZ8sW0YjhoPuisXhqB8rG59B
-ZmMz1LNN4wyMfdAJzFyLwUIA
-=0Mf5
+iQJPBAEBCAA5FiEE2M8hExA5osDaI/yLnfsyxtTWwiUFAmqWJZ4bFIAAAAAABAAO
+bWFudTIsMi41KzEuMTIsMywyAAoJEJ37MsbU1sIlp2UP/ioVyYhIho3lGqB7FlLV
+O6pMqzD4jFhdE5ZeuBRKT2crQnAKy5jzkWu7TQeBKuiHEbEyNifSYfSWSGh+sPBo
+7abSIhwkEHnOcy83tsZe65PJtDknv9wzqXU5EP82Do8tm9nC+tP6/nK6TQbeahrR
+xKbrnbCbINkOjd21GEwLqKttIlcnI06n/kzffGDoCLUvqCs/lWxUFoMv0P7iaq3c
+Rl+xAtzJFp2LrXfNoUlEZc68FlmZAW7hM6prYE/Eb+KfmpqxOjZfo23yVLdWZdUj
+C74+5yYfDE6nHZ7F1MYAvayidTgqW3zDNgQ70ravwnDZnJT1jQnvxIsJK15DL4gS
+7rbnunPihBCyYNtlIKZAV7zOiODG5DJHVuq8FnDeUgKHdr15cBfgy4NzTxmDDvk+
+Wttm7ekCls3ng2x2Bx0Bne6Y4nVxZr8+5IHWgc+WjO2wlnw9XkrM/PMT2AgpMjLD
+rZwQdb8lLVBgUnBJpnYdVUOFlEXej5l1hrSbaRp6QnBROg4jJWVj0mGGo463jqeE
+zsiib7MM7dW2FyBYB5yIf2zEGVCludDjY3bozf/l7u7d/v9Xu4zFOV3ecnAq41cO
+bNAWLu5bwUwpoBy9978xVx8gjvu5p+GFTT2DlNFJhUZqHijxvOFZ3Mya2zdbuCEE
+Wm64h5Bjjuj80PZ12IE9v2fj
+=jPOF
 -----END PGP SIGNATURE-----
